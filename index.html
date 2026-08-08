@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <title>T4C | Think 4 Change</title>
 
@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <link rel="icon" href="assets/Imagenes-copy/t4c-logotipo-final-sinbg.png" type="image/png"> <!--logo en el tab-->
 <!--
 
 TemplateMo 591 villa agency
@@ -30,6 +32,14 @@ https://templatemo.com/tm-591-villa-agency
 
 <body>
 
+  <!-- ***** CEO Quote Masthead Start ***** -->
+  <div class="ceo-masthead">
+    <div class="container">
+      <p class="ceo-masthead-quote">&ldquo;El desempeño no se improvisa, se construye&rdquo;</p>
+      <p class="ceo-masthead-author">Darío Ñancupil <span>— Fundador</span></p>
+    </div>
+  </div>
+  <!-- ***** CEO Quote Masthead End ***** -->
 
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
@@ -39,18 +49,26 @@ https://templatemo.com/tm-591-villa-agency
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="index.html" class="logo">
-                      <img src="assets/Imagenes-copy/think4change-words.png" alt="Logotipo de T4C">
+                    <img src="assets/Imagenes-copy/think4change-words.png" alt="Logotipo de T4C">
+                     <!----- <h3>Think4Change</h3> --->
+                     <!--- <img src="assets/Imagenes-copy/t4c-logotipo-final-sinbg.png" alt="Logotipo de T4C"> ---->
                     </a>
                 <span></span>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                       <li><a href="index.html" class="active">Inicio</a></li>
+                      <li class="nav-dropdown">
+                        <a href="#">Nosotros</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="nuestro-trabajo.html">Nuestro trabajo</a></li>
+                          <li><a href="nuestro-equipo.html">Nuestro equipo</a></li>
+                          <li><a href="nuestros-valores.html">Nuestros valores</a></li>
+                        </ul>
+                      </li>
                       <li><a href="contacto.html">Contáctanos</a></li>
-                      <li><a href="nuestro-equipo.html">Nuestro equipo</a></li>
                       <li><a href="https://blog.think4change.tech/">Blog</a></li>
-                      <li><a href="property-details.html"></a></li> <!---agregar etiqueta-->
-                  </ul>   
+                  </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>
@@ -60,96 +78,150 @@ https://templatemo.com/tm-591-villa-agency
         </div>
     </div>
   </header>
+  <div class="mobile-nav-overlay"></div>
   <!-- ***** Header Area End ***** -->
 
   <div class="main-banner">
     <video id="banner-video" class="banner-bg-video is-active" autoplay muted loop playsinline preload="auto">
-      <source src="assets/videos/intro-video.mp4" type="video/mp4">
+      <source src="" type="video/mp4">
     </video>
     <div class="owl-carousel owl-banner">
   
       <div class="item item-1">
         <div class="header-text">
-          <span class="category">Dario Ñancupil, CEO</span>
-          <h2>El desempeño no se improvisa,<br>se construye.</h2>
+          <img src="assets/Imagenes-copy/t4c-logotipo-final-sinbg.png" alt="T4C" class="banner-logo">
+          <span class="category"></span>
+          <h4>Ayudamos a <span style="color: #2b6cc4;">desarrollar organizaciones</span> en las que se puede confiar.</h4>
         </div>
       </div>
   
       <div class="item item-2">
         <div class="header-text">
+          <img src="assets/Imagenes-copy/t4c-logotipo-final-sinbg.png" alt="T4C" class="banner-logo">
           <span class="category"></span>
-          <h3 class="texto-banner-adaptable">En Think4Change identificamos el talento correcto, aceleramos el desarrollo de capacidades y fortalecemos la ejecución para transformar el desempeño en una ventaja competitiva sostenible.</h3>
+          <h4>Responder mejor es una <span style="color: #2b6cc4;">capacidad</span> que se <span style="color: #2b6cc4;">desarrolla.</span></h4>
         </div>
+        
       </div>
   
       <div class="item item-3">
         <div class="header-text">
-          <span class="category">Miami, <em>South Florida</em></span>
-          <h2>Act Now!<br>Get the highest level penthouse</h2>
+          <img src="assets/Imagenes-copy/t4c-logotipo-final-sinbg.png" alt="T4C" class="banner-logo">
+          <span class="category"></span>
+          <h4>La operación <span style="color: #2b6cc4;">cambió.</span> Las organizaciones también deben hacerlo.</h4>
         </div>
       </div>
   
     </div>
   </div>
 
-  <div class="featured section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-        </div>
-        <div class="col-lg-5">
-          <div class="section-heading">
-            <h2>Best Appartment &amp; Sea view</h2>
-          </div>
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Best useful links ?
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                Get <strong>the best villa</strong> website template in HTML CSS and Bootstrap for your business. TemplateMo provides you the <a href="https://www.google.com/search?q=best+free+css+templates" target="_blank">best free CSS templates</a> in the world. Please tell your friends about it.</div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  How does this work ?
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Why is Villa Agency the best ?
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <hr class="hr">
+
+  <section class="intro">
+    <div class="intro-text" style="color: #ffffff;">
+      <h4>En Think4Change:</h4>
+      <li><i class="fa fa-gear"></i><span>Comprendemos la operación.</span></li>
+      <li><i class="fa fa-gear"></i><span>Identificamos las brechas que limitas su desempeño.</span></li>
+      <li><i class="fa fa-gear"></i><span>Desarrollamos soluciones para fortalecer la capacidad de las organizaciones de cumplir, con consistencia, los compromisos que asumen con sus clientes.</span></li>
       </div>
+  </section>
+
+   <section class="intro-dos">
+    <div class="intro-text" style="color: #ffffff;">
+      <h4>Si lideras una operación, conoces bien esta realidad:</h4>
+      <li><i class="fa fa-gear"></i><span>No todos los días transcurren como estaban planificados.</span></li>
+      <li><i class="fa fa-gear"></i><span>Hay decisiones que no pueden esperar.</span></li>
+      <hr class="hr hr-mobile-only">
+      <i><h4 class="intro-dos-out" style="text-align: center; ">Y, aún así, la operación debe responder con seguridad, continuidad y consistencia</h4></i>
+      <hr class="hr hr-mobile-only">
     </div>
-  </div>
+  </section>
+
+  <section class="expand-cards-wrapper">
+    <div class="cards-intro">
+    </div>
+
+    <div class="cta-elegant-wrapper">
+      <a href="contacto.html" class="cta-elegant">Nosotros sí entendemos la operación, <br> contáctanos</a>
+    </div>
+
+    <cite class="cite">Antes de definir un camino, buscamos entender qué está ocurriendo realmente. Observamos cómo interactúan las personas, los procesos, la tecnología y la forma de trabajar para reconocer aquello que está afectando el desempeño y distinguir sus causas.</cite>
+    <p class="cite-author">Think4Change</p>
+
+    <br>
+    <div class="card-open">
+      <div class="card-open-header">
+        <h3><i>No todas las operaciones necesitan lo mismo y saber dónde intervenir marca la diferencia</i></h3>
+      </div>
+      <br>
+      <div class="card-open-body">
+      <p><i class="fa fa-gear"></i><span>En algunos casos, el desafío está en <em style="font-weight: 600; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">preparar mejor a las personas</em> que ingresan. En otros, en <em style="font-weight: 600; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">fortalecer el liderazgo</em>, <em style="font-weight: 600; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">mejorar los procesos</em> o <em style="font-weight: 600; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">recuperar consistencia</em> entre lo que la organización espera y lo que realmente ocurre en la operación.</span></p>
+      <p><i class="fa fa-gear"></i><span>También puede estar en <em style="font-weight: 600; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">elevar la calidad del servicio</em>, <em style="font-weight: 600; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">incorporar nuevas tecnologías</em> o <em style="font-weight: 600; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">abordar decisiones</em> sobre equipamiento, mantenimiento e inversión para responder a una industria o un mercado que cambia permanentemente.</span></p>
+      <p><i class="fa fa-gear"></i><span>Por eso nuestro trabajo comienza donde una decisión bien orientada puede generar el <em style="font-weight: 600; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">mayor impacto.</em></span></p>
+      </div>
+      <br>
+    
+    <div class="expand-cards-grid">
+
+        <div class="expand-card reverse">
+          <div class="card-media">
+            <img src="assets/Imagenes-copy/openminingsite.jpg" alt="Talento">
+          </div>
+          <div class="card-title-bar">
+            <h4 class="card-title">Talento</h4>
+            <div class="card-extra-text">
+              Identificamos el talento que necesita tu organización para ejecutar su estrategia.
+            </div>
+          </div>
+        </div>
+
+        <div class="expand-card">
+          <div class="card-media">
+            <img src="assets/Imagenes-copy/truck-alone.png" alt="Capacidades">
+          </div>
+          <div class="card-title-bar">
+            <h4 class="card-title">Capacidades</h4>
+            <div class="card-extra-text">
+              Desarrollar acelerado de competencias técnicas y de liderazgo para potenciar el desempeño.
+            </div>
+          </div>
+        </div>
+
+        <div class="expand-card reverse">
+          <div class="card-media">
+            <img src="assets/Imagenes-copy/trucks-in-miningsite.jpg" alt="Ejecución">
+          </div>
+          <div class="card-title-bar">
+            <h4 class="card-title">Ejecución</h4>
+            <div class="card-extra-text">
+              Fortalecer procesos, gestión y disciplina operacional.
+            </div>
+          </div>
+        </div>
+
+        <div class="expand-card">
+          <div class="card-media">
+            <img src="assets/Imagenes-copy/Sunset-truck.jpg" alt="Valor">
+          </div>
+          <div class="card-title-bar">
+            <h4 class="card-title">Valor</h4>
+            <div class="card-extra-text">
+              Medir el impacto de la experiencia del cliente y sus resultados concretos.
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+</section>
 
   <div class="contact section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 offset-lg-4">
+        <div class="col-lg-8 offset-lg-2">
           <div class="section-heading text-center">
             <h6>| Contáctanos</h6>
-            <h2>Envíanos un mensaje y nuestro equipo se pondrá en contacto contigo</h2>
+            <h2>Toda gran transformación comienza con una conversación</h2>
           </div>
         </div>
       </div>
@@ -165,7 +237,7 @@ https://templatemo.com/tm-591-villa-agency
                   <i class="fa fa-envelope" style="font-size: 45px; color: #2b6cc4;">
                   </i>
                 </a>
-                <a href="contacto.html" style="text-align: left;"><h6 style="margin: 0;">info@think4change.tech<br><span style="font-weight: 400; color: #7a7a7a;">Contacto empresa</span></h6></a>
+                <a href="contacto.html" style="text-align: left;"><h6 style="margin: 0;">info@think4change.tech<br><span style="font-weight: 400; color: #8fa2bd;">Contacto empresa</span></h6></a>
               </div>
             </div>
           </div>

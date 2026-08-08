@@ -10,17 +10,112 @@
     });
 
 
-	$(window).scroll(function() {
-	  var scroll = $(window).scrollTop();
-	  var box = $('.header-text').height();
-	  var header = $('header').height();
+	// Hide the CEO quote masthead on scroll so only the header remains visible
+	if ($('.ceo-masthead').length) {
+		$(window).on('scroll', function() {
+			if ($(window).scrollTop() > 40) {
+				$('body').addClass('masthead-hidden');
+			} else {
+				$('body').removeClass('masthead-hidden');
+			}
+		});
+	}
 
-	  if (scroll >= box - header) {
-	    $("header").addClass("background-header");
-	  } else {
-	    $("header").removeClass("background-header");
-	  }
-	})
+
+	// Rotate the gear graphic in "Nuestros valores" at a rate tied to how far/fast you scroll
+	if ($('.bloque-valores-gear').length) {
+		var $gearSection = $('.bloque-valores');
+		var $gearIcon = $('.bloque-valores-gear i');
+		var degreesPerPixel = 0.5;
+
+		var updateGearRotation = function() {
+			var sectionTop = $gearSection.offset().top;
+			var scrollTop = $(window).scrollTop();
+
+			var relativeScroll = Math.max(scrollTop - sectionTop, 0);
+			var degrees = relativeScroll * degreesPerPixel;
+			$gearIcon.css('transform', 'rotate(' + degrees + 'deg)');
+		};
+
+		$(window).on('scroll resize', updateGearRotation);
+		updateGearRotation();
+	}
+
+
+	// Fade/slide each heading+paragraph block into view as it's scrolled to
+	if ($('.valor-block').length) {
+		var revealObserver = new IntersectionObserver(function(entries) {
+			entries.forEach(function(entry) {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('is-visible');
+				}
+			});
+		}, { threshold: 0.3 });
+
+		document.querySelectorAll('.valor-block').forEach(function(block) {
+			revealObserver.observe(block);
+		});
+	}
+
+
+	// Slot-machine style scramble reveal for the stat values in "Nuestro trabajo"
+	if (document.querySelector('.stat-square .value')) {
+		var DIGIT_CHARS = '0123456789';
+		var LETTER_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+		var randomCharLike = function(ch) {
+			if (/[0-9]/.test(ch)) {
+				return DIGIT_CHARS.charAt(Math.floor(Math.random() * DIGIT_CHARS.length));
+			}
+			if (/[a-zA-Z]/.test(ch)) {
+				var random = LETTER_CHARS.charAt(Math.floor(Math.random() * LETTER_CHARS.length));
+				return ch === ch.toLowerCase() ? random.toLowerCase() : random;
+			}
+			return ch;
+		};
+
+		var runSlotEffect = function(el) {
+			var finalText = el.textContent;
+			var perCharDelay = 60;
+			var scrambleInterval = 40;
+			var settleStart = 200;
+			var settled = new Array(finalText.length).fill(false);
+
+			var intervalId = setInterval(function() {
+				var display = '';
+				for (var i = 0; i < finalText.length; i++) {
+					display += settled[i] ? finalText[i] : randomCharLike(finalText[i]);
+				}
+				el.textContent = display;
+			}, scrambleInterval);
+
+			for (var i = 0; i < finalText.length; i++) {
+				(function(index) {
+					setTimeout(function() {
+						settled[index] = true;
+					}, settleStart + index * perCharDelay);
+				})(i);
+			}
+
+			setTimeout(function() {
+				clearInterval(intervalId);
+				el.textContent = finalText;
+			}, settleStart + finalText.length * perCharDelay + scrambleInterval);
+		};
+
+		var slotObserver = new IntersectionObserver(function(entries) {
+			entries.forEach(function(entry) {
+				if (entry.isIntersecting) {
+					runSlotEffect(entry.target);
+					slotObserver.unobserve(entry.target);
+				}
+			});
+		}, { threshold: 0.5 });
+
+		document.querySelectorAll('.stat-square .value').forEach(function(el) {
+			slotObserver.observe(el);
+		});
+	}
 
 	var $bannerCarousel = $('.owl-banner');
 
@@ -104,13 +199,35 @@
 	}
 
 
-	// Menu Dropdown Toggle
-	if($('.menu-trigger').length){
-		$(".menu-trigger").on('click', function() {	
+	// Mobile menu: slide-in sidebar
+	var $mobileNav = $('.header-area .main-nav .nav');
+	var $mobileNavOverlay = $('.mobile-nav-overlay');
+
+	var closeMobileNav = function() {
+		$('.menu-trigger').removeClass('active');
+		$mobileNav.removeClass('is-open');
+		$mobileNavOverlay.removeClass('is-open');
+	};
+
+	if ($('.menu-trigger').length) {
+		$(".menu-trigger").on('click', function() {
 			$(this).toggleClass('active');
-			$('.header-area .nav').slideToggle(200);
+			$mobileNav.toggleClass('is-open');
+			$mobileNavOverlay.toggleClass('is-open');
 		});
 	}
+
+	$mobileNavOverlay.on('click', closeMobileNav);
+
+	$mobileNav.find('a').on('click', function() {
+		closeMobileNav();
+	});
+
+	$(document).on('keydown', function(e) {
+		if (e.key === 'Escape') {
+			closeMobileNav();
+		}
+	});
 
 
 	// Menu elevator animation
@@ -121,9 +238,8 @@
 			if (target.length) {
 				var width = $(window).width();
 				if(width < 991) {
-					$('.menu-trigger').removeClass('active');
-					$('.header-area .nav').slideUp(200);	
-				}				
+					closeMobileNav();
+				}
 				$('html,body').animate({
 					scrollTop: (target.offset().top) - 80
 				}, 700);
