@@ -22,19 +22,31 @@
 	}
 
 
-	// Crossfade slideshow for the intro block photo
-	if ($('.intro-block-img').length) {
-		var $introSlides = $('.intro-block-img img');
-		var introSlideIndex = 0;
+	// Force autoplay on the intro block video (some browsers won't honor the attribute alone)
+	$('.intro-block-img video').each(function() {
+		var video = this;
+		var tryPlay = function() {
+			video.play().catch(function() {});
+		};
+		tryPlay();
+		video.addEventListener('loadeddata', tryPlay);
+		video.addEventListener('canplay', tryPlay);
+	});
 
-		if ($introSlides.length > 1) {
+
+	// Crossfade slideshow for each intro block photo (each block cycles independently)
+	$('.intro-block-img').each(function() {
+		var $slides = $(this).find('img');
+		var slideIndex = 0;
+
+		if ($slides.length > 1) {
 			setInterval(function() {
-				$introSlides.eq(introSlideIndex).removeClass('is-active');
-				introSlideIndex = (introSlideIndex + 1) % $introSlides.length;
-				$introSlides.eq(introSlideIndex).addClass('is-active');
+				$slides.eq(slideIndex).removeClass('is-active');
+				slideIndex = (slideIndex + 1) % $slides.length;
+				$slides.eq(slideIndex).addClass('is-active');
 			}, 4000);
 		}
-	}
+	});
 
 
 	// Rotate the gear graphic in "Nuestros valores" at a rate tied to how far/fast you scroll
