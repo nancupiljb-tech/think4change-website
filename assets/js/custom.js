@@ -22,6 +22,21 @@
 	}
 
 
+	// Crossfade slideshow for the intro block photo
+	if ($('.intro-block-img').length) {
+		var $introSlides = $('.intro-block-img img');
+		var introSlideIndex = 0;
+
+		if ($introSlides.length > 1) {
+			setInterval(function() {
+				$introSlides.eq(introSlideIndex).removeClass('is-active');
+				introSlideIndex = (introSlideIndex + 1) % $introSlides.length;
+				$introSlides.eq(introSlideIndex).addClass('is-active');
+			}, 4000);
+		}
+	}
+
+
 	// Rotate the gear graphic in "Nuestros valores" at a rate tied to how far/fast you scroll
 	if ($('.bloque-valores-gear').length) {
 		var $gearSection = $('.bloque-valores');
