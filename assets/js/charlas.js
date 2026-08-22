@@ -1,10 +1,9 @@
 (function () {
   "use strict";
 
-  // TODO: replace with your real values from Supabase → Project Settings → API.
-  // These are safe to be public (the anon key is designed to be embedded in client code).
-  const SUPABASE_URL = "YOUR_SUPABASE_PROJECT_URL";
-  const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+  // Safe to be public — this is the publishable/anon key, designed to be embedded in client code.
+  const SUPABASE_URL = "https://zoybnhrxmfejweikmzga.supabase.co";
+  const SUPABASE_ANON_KEY = "sb_publishable_gb0gk4A152dRJi_1DhNNQg_nGpbTOw9";
 
   if (SUPABASE_URL.indexOf("YOUR_SUPABASE") === 0) {
     console.warn(
@@ -107,7 +106,10 @@
 
       const { error } = await supabase.auth.signInWithOtp({
         email: email,
-        options: { emailRedirectTo: window.location.href.split("#")[0] },
+        options: {
+          emailRedirectTo: window.location.href.split("#")[0],
+          shouldCreateUser: false,
+        },
       });
 
       if (error) {
