@@ -3192,21 +3192,22 @@ body.masthead-hidden .ceo-masthead + .header-area {
 .bloque-valores {
   display: flex;
   align-items: flex-start;
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 .bloque-valores-text {
   flex: 1 1 62%;
   max-width: 62%;
-  padding: 100px 60px;
-  font-size: 50px;
+  padding: 80px 20px 80px 60px;
+  font-size: 32px;
 }
 
 .bloque-valores-text p {
   width: 100%;
-  margin-bottom: 24px;
-  font-size: 30px;
-  line-height: 1.5;
+  margin-bottom: 18px;
+  font-size: 19px;
+  line-height: 1.7;
+  color: #c3d0e4;
 }
 
 .bloque-valores-text h2 {
@@ -3215,9 +3216,10 @@ body.masthead-hidden .ceo-masthead + .header-area {
 }
 
 .bloque-valores-text h4 {
-  font-size: 40px;
-  line-height: 1.3;
-  margin-bottom: 10px;
+  font-size: 28px;
+  line-height: 1.25;
+  letter-spacing: 0.2px;
+  margin-bottom: 8px;
 }
 
 .bloque-valores-text p:last-child {
@@ -3226,10 +3228,11 @@ body.masthead-hidden .ceo-masthead + .header-area {
 
 .valor-block {
   background-color: #142b4d;
-  border-radius: 16px;
-  padding: 40px 50px;
-  margin-bottom: 40px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(79, 154, 255, 0.1);
+  border-radius: 14px;
+  padding: 26px 32px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -3262,7 +3265,7 @@ body.masthead-hidden .ceo-masthead + .header-area {
 
 .bloque-valores-gear i {
   display: block;
-  font-size: clamp(400px, 42vw, 750px);
+  font-size: clamp(320px, 36vw, 620px);
   color: #f3f6fb;
   transform: rotate(0deg);
   will-change: transform;
@@ -3286,17 +3289,22 @@ body.masthead-hidden .ceo-masthead + .header-area {
     font-size: clamp(260px, 60vw, 400px);
   }
   .bloque-valores-text {
-    font-size: 28px;
-    padding: 60px 30px;
+    font-size: 24px;
+    padding: 50px 24px;
   }
   .bloque-valores-text p {
-    font-size: 17px;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 14px;
   }
   .bloque-valores-text h4 {
-    font-size: 24px;
+    font-size: 18px;
+    margin-bottom: 6px;
   }
   .valor-block {
-    padding: 25px 25px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+    border-radius: 12px;
   }
 }
 
