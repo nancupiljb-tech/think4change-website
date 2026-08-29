@@ -1305,7 +1305,7 @@ background: radial-gradient(circle,rgba(86, 139, 219, 1) 0%, rgb(46, 75, 116) 50
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #041a34;
+  color: #ffffff;
   margin-top: 20px;
   margin-bottom: 0px;
 }
@@ -3935,6 +3935,8 @@ background: linear-gradient(343deg,rgba(52, 126, 237, 1) 0%, rgba(11, 26, 48, 1)
   font-size: 18px;
   line-height: 1.6;
   margin: 0 0 14px 0;
+  padding-top: 0;
+  text-shadow: none;
 }
 
 .intro-block-text p:last-child {
@@ -3963,7 +3965,7 @@ background: linear-gradient(343deg,rgba(52, 126, 237, 1) 0%, rgba(11, 26, 48, 1)
 
 .footer-logo {
   display: block;
-  height: 190px;
+  height: 160px;
   width: auto;
   margin: 0 auto;
    text-shadow:
