@@ -1031,7 +1031,7 @@ Intro
 }
 
 .intro-dos li:last-child {
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 
 .intro-dos li i {
@@ -1142,7 +1142,7 @@ background: linear-gradient(1deg,rgba(63, 135, 236, 0.77) 0%, rgba(30, 63, 110, 
 
 .cite-block {
   max-width: 950px;
-  margin: 40px auto 0;
+  margin: 20px auto 0;
   padding: 55px 60px;
   border-radius: 24px;
   background: #568bdb;
@@ -1194,12 +1194,20 @@ background: radial-gradient(circle,rgba(86, 139, 219, 1) 0%, rgb(46, 75, 116) 50
 
 @media (max-width: 767px) {
   .cite {
-    font-size: 12px;
+    padding-top: 30px;
+    font-size: 16px;
   }
 
   .cite-block {
     padding: 35px 25px;
     border-radius: 16px;
+    padding-bottom: 10px;
+  }
+
+  .cite-author {
+    font-size: 11px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 
@@ -3116,7 +3124,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .expand-cards-wrapper {
-  padding:100px 15px;
+  padding: 20px 15px 100px;
 }
 
 .expand-cards-grid {
@@ -3946,7 +3954,7 @@ background: linear-gradient(343deg,rgba(52, 126, 237, 1) 0%, rgba(11, 26, 48, 1)
   margin: 0 auto;
   padding: 0 20px;
   margin-top: 20px;
-  padding-bottom: 140px;
+  padding-bottom: 60px;
 
 }
 
