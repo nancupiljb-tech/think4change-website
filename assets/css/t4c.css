@@ -459,7 +459,7 @@ Header Style
 .header-area .main-nav .logo h1 {
   line-height: 100px;
   font-size: 28px;
-  text-transform: uppercase;
+  text-transform: normal;
   color: #f3f6fb;
   font-weight: 700;
   letter-spacing: 2px;
