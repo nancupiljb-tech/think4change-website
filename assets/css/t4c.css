@@ -718,10 +718,14 @@ Header Style
 @media (max-width: 767px) {
   .header-area .main-nav .logo {
     position: absolute;
-    left: 15px;
+    left: 12px;
     top: 50%;
     transform: translateY(-50%);
-    max-width: calc(100% - 65px);
+    max-width: calc(100% - 80px);
+  }
+
+  .header-area .main-nav .logo h3 {
+    font-size: 19px;
   }
   .background-header .main-nav .logo {
     top: 50%;
@@ -1055,6 +1059,8 @@ Intro
     margin-left: 0;
     margin-right: 0;
     font-size: 16px;
+    font-weight: 600;
+    margin-top: -20px;
   }
 }
 
@@ -1094,6 +1100,19 @@ background: linear-gradient(1deg,rgba(63, 135, 236, 0.77) 0%, rgba(30, 63, 110, 
   }
 }
 
+.intro-dos-cta-block {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.intro-dos-cta-block:hover .cta-elegant {
+  background-color: #0071f8;
+  border-color: #0071f8;
+  color: #fff;
+}
+
 .cta-elegant-wrapper {
   text-align: center;
   font-size: large;
@@ -1121,10 +1140,20 @@ background: linear-gradient(1deg,rgba(63, 135, 236, 0.77) 0%, rgba(30, 63, 110, 
   color: #fff;
 }
 
+.cite-block {
+  max-width: 950px;
+  margin: 40px auto 0;
+  padding: 55px 60px;
+  border-radius: 24px;
+  background: #568bdb;
+background: radial-gradient(circle,rgba(86, 139, 219, 1) 0%, rgb(46, 75, 116) 50%,  rgb(239, 234, 234) 100%);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
 .cite {
   display: block;
   font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   font-style: italic;
   font-size: 28px;
   line-height: 1.5;
@@ -1133,7 +1162,10 @@ background: linear-gradient(1deg,rgba(63, 135, 236, 0.77) 0%, rgba(30, 63, 110, 
   text-align: center;
   max-width: 950px;
   margin: auto;
-  margin-top: 40px;
+}
+
+.cite-block .cite {
+  max-width: none;
 }
 
 .cite::before {
@@ -1148,10 +1180,10 @@ background: linear-gradient(1deg,rgba(63, 135, 236, 0.77) 0%, rgba(30, 63, 110, 
   display: block;
   text-align: center;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #4F9AFF;
+  color: #041a34;
   margin-top: 20px;
   margin-bottom: 40px;
 }
@@ -1162,7 +1194,12 @@ background: linear-gradient(1deg,rgba(63, 135, 236, 0.77) 0%, rgba(30, 63, 110, 
 
 @media (max-width: 767px) {
   .cite {
-    font-size: 19px;
+    font-size: 12px;
+  }
+
+  .cite-block {
+    padding: 35px 25px;
+    border-radius: 16px;
   }
 }
 
@@ -1570,9 +1607,12 @@ Contact Style
 
 .contact-content {
   margin-top: -180px;
+  margin-bottom: 50px;
   position: relative;
   z-index: 1;
+
 }
+
 .contact .section-heading h6 {
   text-shadow:
     0 0 6px rgba(0, 0, 0, 0.75),
@@ -1699,26 +1739,150 @@ Footer Style
 */
 
 footer.footer-no-gap {
-  margin-top: 0px;
+  margin-top: -180px;
+}
+
+footer.footer-tight {
+  margin-top: 0;
 }
 
 footer {
   margin-top: 150px;
-  background-color: #081422;
-  background: radial-gradient(circle,rgba(255, 255, 255, 1) 0%, rgba(30, 63, 110, 1) 50%, rgba(11, 26, 48, 1) 100%);
+  background-color: #ffffff;
+  background: #0a1626
   min-height: 100px;
+}
+
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-social-links a {
+  display: inline-flex;
+}
+
+.footer-social-links i {
+  font-size: 30px;
+  color: #0a66c2;
+}
+
+@media (max-width: 767px) {
+  .footer-social-links a[href="https://x.com"] {
+    display: none;
+  }
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  padding-top: 40px;
+}
+
+.footer-brand {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-follow {
+  grid-column: 3;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-right: 60px;
+}
+
+.footer-follow-label {
+  color: #0a1626;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid rgba(10, 22, 38, 0.15);
+  margin: 24px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 30px;
+}
+
+.footer-copyright {
+  color: #0a1626;
+  font-size: 14px;
+  margin: 0;
+  text-align: left;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footer-links a {
+  color: #0a1626;
+  font-size: 14px;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+
+.footer-links a:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 767px) {
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  .footer-follow {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 24px;
+  }
+
+  .footer-copyright {
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
 }
 
 footer p {
   text-align: center;
   line-height: 1.5;
-  color: #fff;
+  color: #0a1626;
   font-size: 16px;
   font-weight: 400;
 }
 
 footer p a {
-  color: #fff;
+  color: #0a1626;
   transition: all .3s;
   position: relative;
   z-index: 3;
@@ -3176,6 +3340,7 @@ background-position: center;
   .bloque-2-text {
     width: 100% !important;
     max-width: 100%;
+    margin-left: 0;
     box-sizing: border-box;
   }
 
@@ -3404,7 +3569,7 @@ body.masthead-hidden .ceo-masthead + .header-area {
 .stat-rows-wrapper {
   margin-top:auto;
   background: #ffffff;
-  padding: 60px 15px 1px;
+  padding: 60px 15px 0px;
 }
 
 .stat-rows-wrapper .section-heading {
@@ -3633,6 +3798,7 @@ background: linear-gradient(343deg,rgba(52, 126, 237, 1) 0%, rgba(11, 26, 48, 1)
     display: flex;
     flex-direction: column;
     padding: 16px;
+    margin-top: -40px;
   }
 
   .stat-row,
@@ -3780,8 +3946,8 @@ background: linear-gradient(343deg,rgba(52, 126, 237, 1) 0%, rgba(11, 26, 48, 1)
   margin: 0 auto;
   padding: 0 20px;
   margin-top: 20px;
-  padding-bottom: 80px;
-  
+  padding-bottom: 140px;
+
 }
 
 .intro-block-img {
@@ -3876,6 +4042,7 @@ background: linear-gradient(343deg,rgba(52, 126, 237, 1) 0%, rgba(11, 26, 48, 1)
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 0 20px;
+    padding-bottom: 60px;
   }
   .intro-block-text {
     aspect-ratio: auto;
@@ -3888,7 +4055,7 @@ background: linear-gradient(343deg,rgba(52, 126, 237, 1) 0%, rgba(11, 26, 48, 1)
 
 .footer-logo {
   display: block;
-  height: 140px;
+  height: 190px;
   width: auto;
   margin: 0 auto;
    text-shadow:
