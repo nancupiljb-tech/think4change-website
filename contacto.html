@@ -53,6 +53,7 @@ https://templatemo.com/tm-591-villa-agency
                         </ul>
                       </li>
                       <li><a href="contacto.html">Contáctanos</a></li>
+                      <li><a href="trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
                       <li><a href="https://blog.think4change.tech/">Blog</a></li>
                   </ul>
                     <a class='menu-trigger'>
@@ -85,10 +86,8 @@ https://templatemo.com/tm-591-villa-agency
             <h2>Si ya identificaste los retos de ejecución, conversemos.</h2>
           </div>
           <p> Queremos conocer tu contexto y explorar juntos dónde existe la mayor oportunidad para generar valor.</p>
-          <p><strong><em>¿Buscas oportunidades laborales en la industria minera?</strong></em></p>
-          <p>En Think4Change también apoyamos a profesionales que desean desarrollarse en el rubro de la minería. Si estás buscando nuevas oportunidades, envíanos tu <strong><em>currículum vitae</strong></em> junto con una <strong><em>carta de motivación</strong></em>, contándonos sobre tu experiencia, intereses y el tipo de desafío profesional que buscas.</p>
-          <p>Toda la información y documentación que nos compartas será tratada con estricta confidencialidad y utilizada únicamente para evaluar tu perfil en relación con oportunidades laborales presentes o futuras. No compartiremos tus datos personales con terceros sin tu autorización.</p>
-          
+          <p>¿Buscas oportunidades laborales en la industria minera? Visita <a href="trabaja-con-nosotros.html"><strong>Trabaja con nosotros</strong></a>.</p>
+
           <br>
           <div class="row">
             <div class="col-lg-12">
@@ -116,46 +115,6 @@ https://templatemo.com/tm-591-villa-agency
                   <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Tu Correo" required="">
                 </fieldset>
               </div>
-              
-              <!-- CAMBIO: Se transformó el input de Asunto en un menú desplegable (Select) -->
-              <div class="col-lg-12">
-                <fieldset>
-                  <label for="subject">Asunto</label>
-                  <select name="subject" id="subject" required style="width: 100%; height: 45px; border-radius: 25px; border: 1px solid rgba(255,255,255,0.18); padding: 0 20px; outline: none; margin-bottom: 30px; font-size: 14px; color: #c3d0e4; -webkit-appearance: none; -moz-appearance: none; appearance: none; background: url('data:image/svg+xml;utf8,<svg xmlns=%22http://w3.org width=%2212%22 height=%2212%22 viewBox=%220 0 12 12%22><path fill=%22%238fa2bd%22 d=%22M6 8.825L1.175 4 2.575 2.6l3.425 3.425L9.425 2.6 10.825 4z%22/></svg>') no-repeat calc(100% - 20px) center; background-color: #0a1626;">
-                    <option value="" disabled selected>Selecciona un asunto...</option>
-                    <option value="consulta">Consulta</option>
-                    <option value="trabaja_con_nosotros">Trabaja con nosotros</option>
-                  </select>
-                </fieldset>
-              </div>
-
-                <!-- NUEVO CONTENEDOR DE EMPLEO CON ESTILO MEJORADO -->
-           <div class="col-lg-12" id="campos-empleo" style="display: none; margin-bottom: 25px;">
-             <div class="row">
-                    
-              <!-- NUEVO: Campos para subir CV y Carta (Ocultos por defecto usando display:none) -->
-              <div class="col-lg-6" style="margin-bottom: 20px;">
-                <fieldset>
-                  <label style="display: block; margin-bottom: 8px; font-weight: 500;">Currículum Vitae</label>
-                  <label for="cv-file" class="custom-file-upload">
-                    <i class="fa fa-file-pdf"></i> <span id="cv-text">Seleccionar CV (PDF)</span>
-                  </label>
-                  <input type="file" name="cv-file" id="cv-file" accept=".pdf" style="display: none;">
-                </fieldset>
-              </div>
-              
-              <!-- Campo: Carta de Motivación -->
-              <div class="col-lg-6" style="margin-bottom: 20px;">
-                <fieldset>
-                  <label style="display: block; margin-bottom: 8px; font-weight: 500;">Carta de Motivación</label>
-                  <label for="carta-file" class="custom-file-upload">
-                    <i class="fa fa-envelope-open"></i> <span id="carta-text">Seleccionar archivo</span>
-                  </label>
-                  <input type="file" name="carta-file" id="carta-file" accept=".pdf,.doc,.docx" style="display: none;">
-                </fieldset>
-              </div>
-          </div>
-           </div>
 
               <div class="col-lg-12">
                 <fieldset>
@@ -210,46 +169,5 @@ https://templatemo.com/tm-591-villa-agency
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
 
-  <script>
-   document.getElementById('subject').addEventListener('change', function() {
-  var camposEmpleo = document.getElementById('campos-empleo');
-  var inputCV = document.getElementById('cv-file');
-  
-  if (this.value === 'trabaja_con_nosotros') {
-    camposEmpleo.style.display = 'block';
-    inputCV.setAttribute('required', 'required');
-  } else {
-    camposEmpleo.style.display = 'none';
-    inputCV.removeAttribute('required');
-  }
-});
-
-// FUNCIÓN PARA ACTUALIZAR EL TEXTO E ICONO CUANDO SUBEN UN ARCHIVO
-function configurarCambioArchivo(inputId, labelTextId) {
-  document.getElementById(inputId).addEventListener('change', function() {
-    var labelContainer = this.previousElementSibling;
-    var labelText = document.getElementById(labelTextId);
-    
-    if (this.files && this.files.length > 0) {
-      var nombreArchivo = this.files[0].name;
-      // Si el nombre es muy largo, lo recorta de forma elegante
-      if(nombreArchivo.length > 22) {
-        nombreArchivo = nombreArchivo.substring(0, 19) + '...';
-      }
-      labelText.textContent = nombreArchivo;
-      labelContainer.classList.add('file-uploaded-success');
-    } else {
-      labelText.textContent = inputId === 'cv-file' ? 'Seleccionar CV (PDF)' : 'Seleccionar Carta';
-      labelContainer.classList.remove('file-uploaded-success');
-    }
-  });
-}
-
-// Inicializar escuchadores de archivos
-configurarCambioArchivo('cv-file', 'cv-text');
-configurarCambioArchivo('carta-file', 'carta-text');
-
-  </script>
-  
   </body>
 </html>
