@@ -1,0 +1,129 @@
+/* ===========================
+   NUESTROS VALORES
+=========================== */
+
+.bloque-valores {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.bloque-valores-text {
+  flex: 1 1 62%;
+  max-width: 62%;
+  padding: 80px 20px 80px 60px;
+  font-size: 32px;
+}
+
+.bloque-valores-text p {
+  width: 100%;
+  margin-bottom: 18px;
+  font-size: 19px;
+  line-height: 1.7;
+  color: #c3d0e4;
+}
+
+.bloque-valores-text h2 {
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.bloque-valores-text h4 {
+  font-size: 28px;
+  line-height: 1.25;
+  letter-spacing: 0.2px;
+  margin-bottom: 8px;
+}
+
+.bloque-valores-text p:last-child {
+  margin-bottom: 0;
+}
+
+.valor-block {
+  background-color: #142b4d;
+  border: 1px solid rgba(79, 154, 255, 0.1);
+  border-radius: 14px;
+  padding: 26px 32px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.valor-block:last-child {
+  margin-bottom: 0;
+}
+
+.valor-block.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bloque-valores-gear {
+  flex: 1 1 38%;
+  max-width: 58%;
+  position: sticky;
+  top: 90px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.gear-shift {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.bloque-valores-gear i {
+  display: block;
+  font-size: clamp(320px, 36vw, 620px);
+  color: #f3f6fb;
+  transform: rotate(0deg);
+  will-change: transform;
+}
+
+@media (max-width: 991px) {
+  .bloque-valores {
+    flex-direction: column;
+  }
+  .bloque-valores-text,
+  .bloque-valores-gear {
+    max-width: 100%;
+    flex: 1 1 auto;
+  }
+  .bloque-valores-gear {
+    position: relative;
+    width: 100%;
+    height: 260px;
+  }
+  .bloque-valores-gear i {
+    font-size: clamp(260px, 60vw, 400px);
+  }
+  .bloque-valores-text {
+    font-size: 24px;
+    padding: 50px 24px;
+  }
+  .bloque-valores-text p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+  .bloque-valores-text h4 {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  .valor-block {
+    padding: 20px 22px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .bloque-valores-gear {
+    display: none;
+  }
+}

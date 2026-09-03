@@ -1,0 +1,104 @@
+/* ===========================
+   PAGE HEADING (inner-page hero banner)
+   base rule + one background variant per page
+=========================== */
+
+.page-heading {
+  background-image: url(../../Imagenes-copy/trucks-in-miningsite.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 110px 0px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .page-heading {
+    margin-top: 80px;
+  }
+}
+
+.page-heading span {
+  color: #1e1e1e;
+  font-size: 14px;
+  font-weight: 100;
+  text-transform: capitalize;
+  padding: 10px 25px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.page-heading span a {
+  color: #1e1e1e;
+}
+
+.page-heading h3 {
+  font-size: 48px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+@media (max-width: 767px) {
+  .page-heading h3 {
+    font-size: 22px !important;
+    padding: 14px !important;
+  }
+}
+
+.page-heading-contact {
+  background-image: url(../../Imagenes-copy/vertical.jpg);
+  padding: 60px 0px;
+}
+
+.page-heading-contact h3 {
+  font-weight: 500;
+}
+
+.page-heading-equipo {
+  background-image: url(../../Imagenes-copy/team-foto-t4c.png);
+  background-position: center top;
+  padding: 60px 0px;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .page-heading-equipo {
+    background-position: 30% top;
+    min-height: 200px;
+  }
+}
+
+.page-heading-equipo h3 {
+  font-weight: 500;
+}
+
+.page-heading-charlas {
+  background-image: url(../../Imagenes-copy/mining-site.jpg);
+  background-position: center center;
+  padding: 60px 0px;
+}
+
+.page-heading-charlas h3 {
+  font-weight: 500;
+}
+
+.page-heading-valores {
+  padding: 60px 0px;
+}
+
+.page-heading-valores h3 {
+  font-weight: 500;
+}
+
+.page-heading-trabajo {
+  padding: 60px 0px;
+}
+
+.page-heading-trabajo h3 {
+  font-weight: 500;
+}

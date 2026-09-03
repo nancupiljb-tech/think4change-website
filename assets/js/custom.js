@@ -10,18 +10,6 @@
     });
 
 
-	// Hide the CEO quote masthead on scroll so only the header remains visible
-	if ($('.ceo-masthead').length) {
-		$(window).on('scroll', function() {
-			if ($(window).scrollTop() > 40) {
-				$('body').addClass('masthead-hidden');
-			} else {
-				$('body').removeClass('masthead-hidden');
-			}
-		});
-	}
-
-
 	// Force autoplay on the intro block video (some browsers won't honor the attribute alone)
 	$('.intro-block-img video').each(function() {
 		var video = this;

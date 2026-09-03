@@ -1,0 +1,130 @@
+/* ===========================
+   INTRO BLOQUE 1 (index.html — "En Think4Change")
+   Also defines .intro-block / .intro-block-img / .intro-block-text /
+   .block-link, the shared image+text-panel component reused by
+   INTRO BLOQUE 2 (intro-bloque-2.css) — load this file before that one.
+=========================== */
+
+.intro {
+  background-color: #2b6cc4;
+  padding: 70px 0;
+}
+
+@media (max-width: 767px) {
+  .intro {
+    padding: 40px 0;
+  }
+}
+
+.intro-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 20px;
+  padding-bottom: 60px;
+}
+
+.intro-block-img {
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.intro-block-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.intro-block-img img.is-active {
+  opacity: 1;
+}
+
+.intro-block-img video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.intro-block-img video::-webkit-media-controls,
+.intro-block-img video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+.block-link,
+.block-link:hover,
+.block-link:focus,
+.block-link:active,
+.block-link:visited {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.intro-block-img .block-link {
+  width: 100%;
+  height: 100%;
+}
+
+.intro-block-text {
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+  background-color: #142b4d;
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.intro-block-text h4 {
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-align: left;
+}
+
+.intro-block-text p {
+  color: #c3d0e4;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 0 14px 0;
+  padding-top: 0;
+  text-shadow: none;
+}
+
+.intro-block-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .intro-block {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 20px;
+    padding-bottom: 60px;
+  }
+  .intro-block-text {
+    aspect-ratio: auto;
+    padding: 25px;
+  }
+  .intro-block-text p {
+    font-size: 16px;
+  }
+}

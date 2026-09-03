@@ -1,0 +1,10 @@
+/* ===========================
+   CITA T4C (index.html)
+   The quote card itself (.cite / .cite-block / .cite-author) is a
+   shared component defined in base/components.css.
+=========================== */
+
+.expand-cards-wrapper {
+  padding-top: 100px; 
+  padding-bottom: 10px;
+}

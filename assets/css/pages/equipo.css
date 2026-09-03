@@ -1,0 +1,204 @@
+/* ===========================
+   NUESTRO EQUIPO
+=========================== */
+
+.equipo {
+  padding: 80px 0px;
+}
+
+.equipo-intro {
+  max-width: 1000px;
+  margin: 0 auto 80px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .equipo-intro h3 {
+    white-space: nowrap;
+  }
+}
+
+.equipo-intro p {
+  font-size: 19px;
+  line-height: 1.7;
+  color: #c3d0e4;
+  margin-bottom: 22px;
+  margin-top: 20px;
+}
+
+.equipo-intro p:last-of-type {
+  margin-bottom: 34px;
+}
+
+.equipo-intro-highlight {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.4;
+  color: #f3f6fb;
+}
+
+.equipo-dario {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+/* This reverses the order for person 2 */
+.equipo-jc {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 80px;
+  flex-direction: row-reverse;
+}
+
+/* Circle image — merged from two overlapping declarations that used
+   to live in different parts of t4c.css: size/shadow from the later
+   one, margins from the earlier (still-unchallenged) one. */
+.circle-img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+  margin-top: 60px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.equipo-jc .equipo-img {
+  align-self: flex-start;
+  margin-top: -30px;
+}
+
+/* Text side */
+.equipo-text h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #f3f6fb;
+}
+
+.equipo-text h6 {
+  color: #2b6cc4;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.equipo-text p {
+  font-size: 20px;
+  line-height: 28px;
+  color: #c3d0e4;
+}
+
+.equipo-text-list {
+  margin: 0;
+  padding: 0;
+}
+
+.equipo-text-list li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 20px;
+  line-height: 28px;
+  color: #c3d0e4;
+  margin-bottom: 12px;
+}
+
+.equipo-text-list li:last-child {
+  margin-bottom: 0;
+}
+
+.equipo-text-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #4F9AFF;
+}
+
+.equipo-dario .equipo-text,
+.equipo-jc .equipo-text {
+  flex: 1;
+  max-width: 55%;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+@media (max-width: 767px) {
+  .equipo-dario,
+  .equipo-jc {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .equipo-jc .equipo-img {
+    align-self: center;
+    margin-top: 0;
+  }
+
+  .circle-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .equipo-dario .equipo-text,
+  .equipo-jc .equipo-text {
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .equipo-text h3 {
+    font-size: 22px;
+  }
+
+  .equipo-text p,
+  .equipo-text-list li {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .equipo-text-list {
+    text-align: left;
+  }
+}
+
+/* Final quote */
+.equipo-text-final {
+  text-align: center;
+  padding: 60px 15%;
+  margin-top: 40px;
+}
+
+.equipo-text-final h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: #f3f6fb;
+  line-height: 40px;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+.equipo-text-final-cta-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 22px;
+  color: #f3f6fb;
+  margin-bottom: 24px;
+}

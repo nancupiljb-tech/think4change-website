@@ -1,0 +1,11 @@
+/* ===========================
+   INTRO BLOQUE 2 (index.html — "Si lideras una operación...")
+   Uses the .intro-block/.intro-block-text/.intro-block-img component
+   defined in intro-bloque-1.css (load that file first).
+=========================== */
+
+.intro-dos-fade {
+  background: rgba(255, 255, 255, 0.01);
+  background: linear-gradient(1deg,rgba(63, 135, 236, 0.77) 0%, rgba(30, 63, 110, 0.77) 80%, rgba(11, 26, 48, 1) 100%);
+  padding-top: 60px;
+}

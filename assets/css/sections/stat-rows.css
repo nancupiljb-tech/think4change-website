@@ -1,0 +1,260 @@
+/* ===========================
+   EL DESAFÍO — stat collage (index.html)
+=========================== */
+
+.stat-rows-wrapper {
+  margin-top: auto;
+  background: #ffffff;
+  padding: 40px 15px 0px;
+}
+
+.stat-rows-wrapper .section-heading {
+  text-align: center;
+}
+
+.stat-rows-wrapper .section-heading h2 {
+  color: #0b1a30;
+  text-shadow: none;
+}
+
+.stat-rows-wrapper .section-heading h6 {
+  text-shadow: none;
+  font-size: 20px;
+}
+
+/* Main collage */
+.stat-rows-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(180px, auto));
+  gap: 20px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 50px auto 40px;
+  padding: 32px;
+  padding-top: 0px;
+  background: #ffffff;
+  box-sizing: border-box;
+  container-type: inline-size;
+}
+
+/* All blocks */
+.stat-row,
+.stat-row-photo,
+.stat-row-logo {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(11, 26, 48, 0.16);
+  box-sizing: border-box;
+}
+
+/* Individual block positions */
+.stat-rows-grid > .stat-row:nth-child(1) {
+  grid-column: 1 / span 5;
+  grid-row: 1;
+}
+
+.stat-rows-grid > .stat-row-photo {
+  grid-column: 6 / span 4;
+  grid-row: 1;
+}
+
+.stat-rows-grid > .stat-row:nth-child(3) {
+  grid-column: 6 / span 4;
+  grid-row: 2;
+}
+
+.stat-rows-grid > .stat-row:nth-child(4) {
+  grid-column: 10 / span 3;
+  grid-row: 1;
+}
+
+.stat-rows-grid > .stat-row:nth-child(5) {
+  grid-column: 1 / span 5;
+  grid-row: 2;
+}
+
+.stat-rows-grid > .stat-row-logo {
+  grid-column: 10 / span 3;
+  grid-row: 2;
+}
+
+/* Statistic blocks */
+.stat-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+  background: linear-gradient(135deg, #0b1a30 0%, #1e3f6e 100%);
+  color: #ffffff;
+  padding: 30px 26px;
+  box-sizing: border-box;
+}
+
+/* Alternate treatment for selected blocks */
+.stat-rows-grid > .stat-row:nth-child(1) {
+  background: #2863BD;
+  background: linear-gradient(343deg,rgb(34, 87, 165) 0%, rgba(11, 26, 48, 1) 100%);
+}
+
+.stat-rows-grid > .stat-row:nth-child(3) {
+  background: #2863BD;
+  background: linear-gradient(343deg,rgba(52, 126, 237, 1) 0%, rgba(11, 26, 48, 1) 100%);
+}
+
+/* Statistic value */
+.stat-square {
+  min-width: 0;
+}
+
+.stat-square .value {
+  display: block;
+  max-width: 100%;
+  color: #4F9AFF;
+  font-family: 'Roboto Mono', monospace;
+  font-size: clamp(1.5rem, 3cqw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  white-space: nowrap;
+  transition: color .3s ease;
+}
+
+.stat-square .value:hover {
+  color: #ffffff;
+}
+
+.stat-square .label {
+  display: block;
+  margin-top: 10px;
+  color: #c3d0e4;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+/* Text content */
+.stat-row-text {
+  min-width: 0;
+}
+
+.stat-row-text p {
+  margin: 0;
+  color: #c3d0e4;
+  font-size: clamp(0.85rem, 1.2cqw, 1.05rem);
+  line-height: 1.5;
+}
+
+/* Meeting photo */
+.stat-row-photo {
+  min-height: 260px;
+  background-color: #1e3f6e;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 0;
+}
+
+.stat-row-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(11, 26, 48, 0.08),
+    rgba(30, 63, 110, 0.22)
+  );
+  pointer-events: none;
+}
+
+/* Logo block */
+.stat-row-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  background: #ffffff;
+  border: 1px solid rgba(11, 26, 48, 0.12);
+}
+
+.stat-mini-logo {
+  display: block;
+  width: min(100%, 360px);
+  max-height: 300px;
+  object-fit: contain;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .stat-rows-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-rows: auto;
+    padding: 22px;
+    gap: 16px;
+  }
+
+  .stat-rows-grid > .stat-row:nth-child(1) {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+  }
+
+  .stat-rows-grid > .stat-row-photo {
+    grid-column: 4 / span 3;
+    grid-row: 2;
+  }
+
+  .stat-rows-grid > .stat-row:nth-child(3) {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+  }
+
+  .stat-rows-grid > .stat-row:nth-child(4) {
+    grid-column: 4 / span 3;
+    grid-row: 1;
+  }
+
+  .stat-rows-grid > .stat-row:nth-child(5) {
+    grid-column: 1 / span 3;
+    grid-row: 3;
+  }
+
+  .stat-rows-grid > .stat-row-logo {
+    grid-column: 4 / span 3;
+    grid-row: 3;
+  }
+}
+
+/* Mobile */
+@media (max-width: 620px) {
+  .stat-rows-grid {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    margin-top: -40px;
+  }
+
+  .stat-row,
+  .stat-row-photo,
+  .stat-row-logo {
+    min-height: 220px;
+  }
+
+  .stat-row {
+    padding: 22px 18px;
+  }
+
+  .stat-row-text p {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .stat-row-photo {
+    min-height: 240px;
+  }
+
+  .stat-row-logo {
+    min-height: 180px;
+  }
+}

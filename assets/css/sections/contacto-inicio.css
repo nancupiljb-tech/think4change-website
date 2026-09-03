@@ -1,0 +1,69 @@
+/* ===========================
+   CONTACTO INICIO (index.html — "Conversemos" teaser + email card)
+   distinto a contacto.html / trabaja-con-nosotros.html.
+=========================== */
+
+.contact {
+  background-image: url(../../Imagenes-copy/Sunset-truck.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 60px 0px 150px 0px;
+  position: relative;
+}
+
+.contact .section-heading h2 {
+  color: #fff;
+}
+
+.contact .section-heading h6 {
+
+}
+
+.contact-content {
+  margin-top: -180px;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-content .item {
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  padding: 35px 30px;
+  background-color: #142b4d;
+}
+
+.contact-content .email {
+  margin: 0 auto;
+}
+
+.contact-content .item h6 {
+  font-size: 20px;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.contact-content .item h6 span {
+  font-size: 15px;
+  color: #8fa2bd;
+  font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .contact-content .item.email i {
+    font-size: 28px !important;
+  }
+
+  .contact-content .item.email {
+    gap: 14px !important;
+  }
+
+  .contact-content .item h6 {
+    font-size: 15px;
+  }
+
+  .contact-content .item h6 span {
+    font-size: 12px;
+  }
+}

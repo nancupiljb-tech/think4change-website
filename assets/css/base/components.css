@@ -1,0 +1,109 @@
+/* ===========================
+   SHARED COMPONENTS
+   .cta-elegant (outline pill button) — index.html + nuestro-equipo.html
+   .cite* (quote card)         — index.html
+=========================== */
+
+.cta-elegant-wrapper {
+  text-align: center;
+  font-size: large;
+  margin: -60px auto 80px auto;
+  padding: 0 20px;
+}
+
+.cta-elegant {
+  display: inline-block;
+  padding: 16px 40px;
+  border: 1.5px solid #4F9AFF;
+  border-radius: 30px;
+  color: #f3f6fb;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: .3px;
+  background-color: transparent;
+  transition: all .3s ease;
+  margin-top: 20px
+}
+
+.cta-elegant:hover {
+  background-color: #0071f8;
+  border-color: #0071f8;
+  color: #fff;
+}
+
+.cite-block {
+  max-width: 950px;
+  margin: 20px auto 0;
+  padding: 55px 60px;
+  border-radius: 24px;
+  background: #568bdb;
+  background: radial-gradient(circle,rgba(86, 139, 219, 1) 0%, rgb(46, 75, 116) 50%,  rgb(239, 234, 234) 100%);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 768px) {
+  .cite-block {
+    margin-bottom: 80px;
+  }
+}
+
+.cite {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 28px;
+  line-height: 1.5;
+  color: #f3f6fb;
+  letter-spacing: .2px;
+  text-align: center;
+  max-width: 950px;
+  margin: auto;
+}
+
+.cite-block .cite {
+  max-width: none;
+}
+
+.cite::before {
+  content: '\201C';
+}
+
+.cite::after {
+  content: '\201D';
+}
+
+.cite-author {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.cite-author::before {
+  content: '\2014\00A0';
+}
+
+@media (max-width: 767px) {
+  .cite {
+    padding-top: 30px;
+    font-size: 16px;
+  }
+
+  .cite-block {
+    padding: 35px 25px;
+    border-radius: 16px;
+    padding-bottom: 10px;
+  }
+
+  .cite-author {
+    font-size: 11px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

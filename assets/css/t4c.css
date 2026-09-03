@@ -1870,7 +1870,6 @@ footer.footer-tight {
 footer {
   margin-top: 150px;
   background-color: #ffffff;
-  background: #0a1626
   min-height: 100px;
 }
 
@@ -3195,6 +3194,7 @@ background-position: center;
   line-height: 1.2;
   margin-top: 30px;
   margin-bottom: 20px;
+  padding-left: 190px;
 }
 
 .bloque-2-text p {
@@ -3206,6 +3206,7 @@ background-position: center;
   margin: 0;
   text-align: left;
   gap: 10px;
+  padding-left: 190px;
 }
 
 .bloque-2-cta {
@@ -3279,64 +3280,6 @@ background-position: center;
 /* ===========================
    BLOQUE VALORES + ENGRANAJE
 =========================== */
-
-.header-area {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 200;
-}
-
-/* index.html has a quote masthead above the header; both stay pinned, stacked */
-.ceo-masthead {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 210;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.ceo-masthead + .header-area {
-  top: 96.5px;
-  transition: top 0.3s ease;
-}
-
-@media (max-width: 767px) {
-  .ceo-masthead + .header-area {
-    top: 146px;
-  }
-}
-
-/* Once the page is scrolled, tuck the quote away and let the header dock at the very top */
-body.masthead-hidden .ceo-masthead {
-  transform: translateY(-100%);
-  opacity: 0;
-  pointer-events: none;
-}
-
-body.masthead-hidden .ceo-masthead + .header-area {
-  top: 0;
-}
-
-@media (max-width: 767px) {
-  .ceo-masthead + .header-area + .mobile-nav-overlay {
-    top: 226px;
-  }
-
-  body.masthead-hidden .ceo-masthead + .header-area + .mobile-nav-overlay {
-    top: 80px;
-  }
-
-  .ceo-masthead + .header-area .main-nav ul.nav {
-    top: 226px;
-  }
-
-  body.masthead-hidden .ceo-masthead + .header-area .main-nav ul.nav {
-    top: 80px;
-  }
-}
 
 .bloque-valores {
   display: flex;

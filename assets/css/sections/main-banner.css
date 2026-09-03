@@ -1,0 +1,211 @@
+/* ===========================
+   MAIN BANNER (index.html hero carousel)
+   Merged/deduplicated from several overlapping "Banner Style" and
+   later "Centrado Total" declarations — reflects what currently
+   renders. Rules that targeted h2/h3/.texto-banner-adaptable/
+   .banner-logo/.button-banner-adaptable were dropped: this banner's
+   markup only ever uses h4 + .category, so those never matched
+   anything.
+=========================== */
+
+.main-banner {
+  position: relative;
+  overflow: hidden;
+  padding-top: 0px;
+}
+
+@media (max-width: 767px) {
+  .main-banner {
+    padding-top: 226px;
+  }
+}
+
+.main-banner .owl-banner {
+  position: relative;
+  z-index: 1;
+}
+
+.banner-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+}
+
+.banner-bg-video.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-banner .item {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 130px 20% 190px 20%;
+  margin-top: 0px;
+}
+
+@media (max-width: 767px) {
+  .main-banner .item {
+    padding: 80px 10% 185px 10%;
+  }
+}
+
+.main-banner .item-1 {
+  background: transparent;
+  background-color: rgba(53, 1, 1, 0.5);
+  background-image: url(../../Imagenes-copy/banner-1.png)
+}
+
+.main-banner .item-2 {
+  background-image: url(../../Imagenes-copy/banner-2.png);
+}
+
+.main-banner .item-3 {
+  background-image: url(../../Imagenes-copy/banner-41.png);
+}
+
+/* Text block: absolutely centered over the slide */
+.main-banner .owl-banner .item .header-text {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  text-align: center !important;
+  width: 85% !important;
+  max-width: 950px !important;
+  float: none !important;
+  margin: 0 auto !important;
+}
+
+@media (max-width: 991px) {
+  .main-banner .header-text {
+    padding: 20px;
+    width: 90% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-banner .owl-banner .item .header-text {
+    top: 48% !important;
+  }
+}
+
+.main-banner .item span.category,
+.main-banner .header-text .category {
+  color: #f3f6fb;
+  font-size: 16px;
+  font-weight: 200;
+  text-transform: capitalize;
+  padding: 6px 15px;
+  display: inline-block !important;
+  margin: 0 auto 20px auto !important;
+  text-align: center !important;
+  float: none !important;
+}
+
+.main-banner .item span.category em {
+  font-style: normal;
+  color: #4F9AFF;
+}
+
+/* "Glow" text-shadow treatment shared by the headline + category label */
+.main-banner .header-text h4,
+.main-banner .header-text .category {
+  text-shadow:
+    0 0 6px rgba(0, 0, 0, 0.75),
+    0 0 16px rgba(0, 0, 0, 0.6),
+    0 0 32px rgba(0, 0, 0, 0.45);
+  font-size: 30px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .main-banner .header-text h4,
+  .main-banner .header-text .category {
+    font-size: 20px;
+  }
+}
+
+/* Softer glow on slide 2 specifically */
+.main-banner .item-2 .header-text h4,
+.main-banner .item-2 .header-text .category {
+  text-shadow:
+    0 0 4px rgba(0, 0, 0, 0.35),
+    0 0 10px rgba(0, 0, 0, 0.28),
+    0 0 20px rgba(0, 0, 0, 0.18);
+}
+
+.main-banner .owl-dots {
+  position: absolute !important;
+  bottom: 30px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 10 !important;
+  width: auto !important;
+}
+
+.main-banner .owl-dots .owl-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all .5s;
+  margin: 0 5px !important;
+  display: inline-block !important;
+}
+
+.main-banner .owl-dots .active {
+  background-color: #4F9AFF;
+}
+
+.main-banner .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50px);
+}
+
+.main-banner .owl-nav .owl-prev i,
+.main-banner .owl-nav .owl-next i {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  display: inline-block;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  opacity: 1;
+  transition: all .3s;
+}
+
+.main-banner .owl-nav .owl-prev i {
+  position: absolute;
+  left: 45px;
+}
+
+.main-banner .owl-nav .owl-next i {
+  position: absolute;
+  right: 45px;
+}
+
+.main-banner .owl-nav .owl-prev i:hover,
+.main-banner .owl-nav .owl-next i:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 767px) {
+  .main-banner .owl-nav {
+    display: none;
+  }
+}

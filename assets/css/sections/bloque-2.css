@@ -1,0 +1,124 @@
+/* ===========================
+   INTRO BANNER 2 (index.html — mining photo + CTA)
+=========================== */
+
+.bloque-2-section {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(11, 26, 48, 0.95) 0%,
+      rgba(19, 40, 70, 0.55) 50%,
+      rgba(255, 255, 255, 0.05) 100%
+    ),
+    url(../../Imagenes-copy/trucks-in-miningsite.jpg);
+  background-size: cover;
+  background-position: center;
+  border-top: 3px solid #153561;
+  padding: 50px 0;
+  position: relative;
+  
+}
+
+.bloque-2-text {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bloque-2-text h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 36px;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-shadow:
+    0 0 6px rgba(0, 0, 0, 0.75),
+    0 0 16px rgba(0, 0, 0, 0.6),
+    0 0 32px rgba(0, 0, 0, 0.45);
+}
+
+.bloque-2-text p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: #ffffff;
+  line-height: 1.45;
+  margin: 0;
+  text-align: center;
+  gap: 10px;
+  text-shadow:
+    0 0 6px rgba(0, 0, 0, 0.75),
+    0 0 16px rgba(0, 0, 0, 0.6),
+    0 0 32px rgba(0, 0, 0, 0.45);
+}
+
+.bloque-2-cta {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-50%);
+  display: inline-block;
+  padding: 16px 34px;
+  border: 1.5px solid #4F9AFF;
+  border-radius: 30px;
+  background-color: rgba(11, 26, 48, 0.35);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: .3px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all .3s ease;
+}
+
+.bloque-2-cta:hover {
+  background-color: #0071f8;
+  border-color: #0071f8;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .bloque-2-section {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bloque-2-text {
+    width: 100% !important;
+    max-width: 100%;
+    margin-left: 0;
+    box-sizing: border-box;
+  }
+
+  .bloque-2-cta {
+    position: static;
+    display: inline-block;
+    transform: none;
+    margin: 24px 20px 0;
+    white-space: normal;
+  }
+
+  .bloque-2-text h2 {
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  .bloque-2-text p {
+    font-size: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+  }
+}

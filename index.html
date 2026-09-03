@@ -15,7 +15,26 @@
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/t4c.css">
+
+    <!-- Shared base styles -->
+    <link rel="stylesheet" href="assets/css/base/reset.css">
+    <link rel="stylesheet" href="assets/css/base/layout.css">
+    <link rel="stylesheet" href="assets/css/base/header.css">
+    <link rel="stylesheet" href="assets/css/base/components.css">
+
+    <!-- Homepage sections, in page order -->
+    <link rel="stylesheet" href="assets/css/sections/ceo-masthead.css">
+    <link rel="stylesheet" href="assets/css/sections/main-banner.css">
+    <link rel="stylesheet" href="assets/css/sections/intro-bloque-1.css">
+    <link rel="stylesheet" href="assets/css/sections/bloque-2.css">
+    <link rel="stylesheet" href="assets/css/sections/intro-bloque-2.css">
+    <link rel="stylesheet" href="assets/css/sections/stat-rows.css">
+    <link rel="stylesheet" href="assets/css/sections/values-split.css">
+    <link rel="stylesheet" href="assets/css/sections/cita.css">
+    <link rel="stylesheet" href="assets/css/sections/contacto-inicio.css">
+
+    <link rel="stylesheet" href="assets/css/base/footer.css">
+
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
@@ -32,17 +51,8 @@ https://templatemo.com/tm-591-villa-agency
 
 <body>
 
-  <!-- ***** CEO Quote Masthead Start ***** -->
-  <div class="ceo-masthead">
-    <div class="container">
-      <p class="ceo-masthead-quote">&ldquo;El desempeño no se improvisa, se construye&rdquo;</p>
-      <p class="ceo-masthead-author">Darío Ñancupil <span>— Fundador</span></p>
-    </div>
-  </div>
-  <!-- ***** CEO Quote Masthead End ***** -->
-
   <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
+  <header class="header-area">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -77,14 +87,23 @@ https://templatemo.com/tm-591-villa-agency
     </div>
   </header>
   <div class="mobile-nav-overlay"></div>
-  <!-- ***** Header Area End ***** -->
+  <!--  Header End -->
 
+  <!-- CEO Quote Masthead Start -->
+  <div class="ceo-masthead">
+    <div class="container">
+      <p class="ceo-masthead-quote">&ldquo;El desempeño no se improvisa, se construye&rdquo;</p>
+      <p class="ceo-masthead-author">Darío Ñancupil <span>— Fundador</span></p>
+    </div>
+  </div>
+  <!--  CEO Quote Masthead End  -->
+
+  <!--  Main Banner Start -->
   <div class="main-banner">
     <video id="banner-video" class="banner-bg-video is-active" autoplay muted loop playsinline preload="auto">
       <source src="" type="video/mp4">
     </video>
     <div class="owl-carousel owl-banner">
-  
       <div class="item item-1">
         <div class="header-text">
           <span class="category"></span>
@@ -110,7 +129,11 @@ https://templatemo.com/tm-591-villa-agency
     </div>
   </div>
 
+  <!--  Main Banner End  -->
+
   <hr class="hr">
+
+  <!--   Intro Bloque 1 Start  -->
 
   <section class="intro">
     <div class="intro-block">
@@ -126,23 +149,30 @@ https://templatemo.com/tm-591-villa-agency
           <h4>En Think4Change</h4>
           <p>Comprendemos la operación.</p>
           <p>Identificamos las brechas que limita su desempeño.</p>
-          <p>Desarrollamos soluciones para fortalecer la capacidad de las organizaciones de cumplir, con consistencia, los compromisos que asumen con sus clientes.</p>
+          <p>Desarrollamos soluciones para fortalecer la capacidad de las organizaciones de cumplir los compromisos que asumen con sus clientes.</p>
         </a>
       </div>
     </div>
   </section>
 
+<!--   Intro Bloque 1 End -->
+
+<!--   Intro Banner 2 Start -->
+<a href="contacto.html" class="block-link">
   <section class="bloque-2-section">
     <div class="bloque-2">
       <div class="bloque-2-text">
         <h2><strong>Las organizaciones industriales enfrentan un escenario muy distinto al de hace una década</strong></h2>
-        <p>La transformación tecnológica, la escasez de talento especializado, estándares cada vez más altos de seguridad y la necesidad permanente de mejorar la productividad están redefiniendo la forma de operar.</p>
+        <p>Tecnología, talento, seguridad y productividad están cambiando la forma de operar.</p>
         <br>
         <p>Hoy la capacidad de responder dejó de ser una ventaja competitiva; es una condición para sostener el negocio.</p>
       </div>
-      <a href="contacto.html" class="bloque-2-cta">Y nosotros lo sabemos &rarr;</a>
     </div>
   </section>
+</a>
+ <!--   Intro Banner 2 End -->
+
+ <!--   Intro Bloque 2 Start -->
 
    <section class="intro-dos intro-dos-fade">
     <div class="intro-block">
@@ -152,7 +182,6 @@ https://templatemo.com/tm-591-villa-agency
           <p>No todos los días transcurren como estaban planificados.</p>
           <p>Las condiciones cambian y aparecen imprevistos.</p>
           <p>Hay decisiones que no pueden esperar.</p>
-          <p style="font-weight: 700; font-style: italic; color:#ffffff">Y, aún así, la operación debe responder con seguridad, continuidad y consistencia.</p>
         </a>
       </div>
       <div class="intro-block-img">
@@ -164,6 +193,10 @@ https://templatemo.com/tm-591-villa-agency
       </div>
     </div>
   </section>
+
+<!--   Intro Bloque 2 End -->
+
+<!-- Seccíon el Desafío Start -->
 
   <section class="stat-rows-wrapper">
     <div class="container">
@@ -184,7 +217,7 @@ https://templatemo.com/tm-591-villa-agency
         </div>
       </div>
 
-      <div class="stat-row stat-row-photo" style="background-image: url('assets/Imagenes-copy/mesa-reunion.JPG');"></div>
+      <div class="stat-row stat-row-photo" style="background-image: url('assets/Imagenes-copy/openminingsite.jpg"></div>
 
       <div class="stat-row reverse">
         <div class="stat-square">
@@ -221,9 +254,11 @@ https://templatemo.com/tm-591-villa-agency
 
     </div>
   </section>
+<!-- Seccíon el Desafío End -->
 <br>
 <br>
 <br>
+<!-- Sección sobre valores y fotos Start -->
   <section class="values-split">
     <div class="values-split-inner">
       <div class="values-split-text">
@@ -272,18 +307,9 @@ https://templatemo.com/tm-591-villa-agency
       </div>
     </div>
   </section>
+<!-- Sección sobre valores y fotos End -->
 
-  <section class="intro-dos">
-    <div class="intro-text" style="color: #ffffff;">
-      <p>Las organizaciones que sostienen su desempeño tienen algo en común. No esperan a que los problemas aparezcan para actuar: observan, aprenden, anticipan. Fortalecen aquello que hace posible una buena ejecución.</p>
-
-      <a href="contacto.html" class="intro-dos-cta-block">
-        <i><h4 class="intro-dos-out" style="text-align: center; ">Responder mejor es una capacidad que se desarrolla.</h4></i>
-        <span class="cta-elegant">Entendemos la operación, <br> contáctanos</span>
-      </a>
-    </div>
-  </section>
-
+<!-- Cita T4C Start -->
   <section class="expand-cards-wrapper">
     <div class="cite-block">
       <a href="contacto.html"><cite class="cite">Antes de definir un camino, buscamos entender qué está ocurriendo realmente. Observamos cómo interactúan las personas, los procesos, la tecnología y la forma de trabajar para reconocer aquello que está afectando el desempeño y distinguir sus causas.</cite>
@@ -291,18 +317,24 @@ https://templatemo.com/tm-591-villa-agency
     </div>
   </section>
 
+<!-- Cita T4C End -->
+
+<!-- Contacto Inicio Start --> 
+
   <div class="contact section">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading text-center">
-            <h6>| Contáctanos</h6>
             <h2>Toda gran transformación comienza con una conversación</h2>
-          </div>
+        <br>
+            <h6>Contáctanos</h6>
+             </div>
         </div>
       </div>
     </div>
   </div>
+
 
   <div class="contact-content">
     <div class="container">
@@ -319,13 +351,16 @@ https://templatemo.com/tm-591-villa-agency
           </div>
         </div>
   </div>
+<!-- Contacto Inicio End --> 
 
+<!-- Footer Start --> 
 <footer class="footer-tight">
   <div class="container">
 
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="assets/Imagenes-copy/t4c-logotipo-final-sinbg.png" alt="Think4Change" class="footer-logo">
+        <img src="assets/Imagenes-copy/footer-logo-mark.png" alt="Think4Change" class="footer-logo">
+        <img src="assets/Imagenes-copy/footer-logo-subtitle.png" alt="Think for Change" class="footer-logo-subtitle">
       </div>
 
       <div class="footer-follow">
@@ -346,12 +381,14 @@ https://templatemo.com/tm-591-villa-agency
         <a href="contacto.html">Contáctanos</a>
         <a href="nuestro-equipo.html">Nuestro equipo</a>
         <a href="nuestros-valores.html">Nuestros valores</a>
+        <a href="trabaja-con-nosotros.html">Trabaja con nosotros</a>
         <a href="https://blog.think4change.tech/">Blog</a>
       </nav>
     </div>
 
   </div>
 </footer>
+<!-- Footer End --> 
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->

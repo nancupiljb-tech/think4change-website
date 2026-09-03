@@ -1,0 +1,47 @@
+/* ===========================
+   CEO QUOTE MASTHEAD (index.html only)
+=========================== */
+
+.ceo-masthead {
+ackground: #568bdb;
+background: radial-gradient(circle,rgba(86, 139, 219, 1) 0%, rgb(46, 75, 116) 50%,  rgb(239, 234, 234) 100%);
+  border-bottom: 10px ;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.ceo-masthead-quote {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #0b1a30;
+  letter-spacing: .2px;
+  margin: 0 0 6px 0;
+}
+
+.ceo-masthead-author {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #0b1a30;
+  margin: 0;
+}
+
+.ceo-masthead-author span {
+  color: #0b1a30;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+@media (max-width: 767px) {
+  .ceo-masthead {
+    padding: 50px 20px 16px 20px;
+  }
+  .ceo-masthead-quote {
+    font-size: 15px;
+  }
+}
