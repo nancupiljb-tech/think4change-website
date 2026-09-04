@@ -40,10 +40,11 @@ footer {
 
 .footer-top {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  text-align: center;
-  gap: 0px;
+  justify-content: space-between;
+  text-align: left;
+  gap: 20px;
   padding-top: 40px;
 }
 
@@ -57,12 +58,30 @@ footer {
 
 .footer-follow {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 0px;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 90px;
+}
+
+@media (max-width: 767px) {
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 0px;
+  }
+
+  .footer-brand {
+    align-items: center;
+  }
+
+  .footer-follow {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
 }
 
 .footer-follow-label {
@@ -71,7 +90,8 @@ footer {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: -20px
+  margin-bottom: 0;
+  margin-left: 90px;
 }
 
 .footer-divider {
