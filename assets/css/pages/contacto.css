@@ -1,0 +1,36 @@
+/* ===========================
+   CONTACTO — banner (hero style)
+=========================== */
+
+.page-heading-contact {
+  background-image: url(../../Imagenes-copy/banner-3.png);
+  padding: 100px 0px;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.page-heading-contact .page-heading-hero-text {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.65);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .page-heading-contact {
+    padding: 90px 0px;
+    min-height: 260px;
+  }
+
+  .page-heading-contact .page-heading-hero-text {
+    font-size: 24px !important;
+    padding: 0 !important;
+  }
+}

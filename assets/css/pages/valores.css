@@ -2,6 +2,14 @@
    NUESTROS VALORES
 =========================== */
 
+.page-heading-valores {
+  padding: 60px 0px;
+}
+
+.page-heading-valores h3 {
+  font-weight: 500;
+}
+
 .bloque-valores {
   display: flex;
   align-items: flex-start;

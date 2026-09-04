@@ -58,7 +58,7 @@
 
 
 	// Fade/slide each heading+paragraph block into view as it's scrolled to
-	if ($('.valor-block').length) {
+	if ($('.valor-block, .equipo-text, .equipo-photo').length) {
 		var revealObserver = new IntersectionObserver(function(entries) {
 			entries.forEach(function(entry) {
 				if (entry.isIntersecting) {
@@ -67,7 +67,7 @@
 			});
 		}, { threshold: 0.3 });
 
-		document.querySelectorAll('.valor-block').forEach(function(block) {
+		document.querySelectorAll('.valor-block, .equipo-text, .equipo-photo').forEach(function(block) {
 			revealObserver.observe(block);
 		});
 	}

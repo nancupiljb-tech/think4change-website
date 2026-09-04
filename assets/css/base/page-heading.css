@@ -1,6 +1,9 @@
 /* ===========================
    PAGE HEADING (inner-page hero banner)
-   base rule + one background variant per page
+   Base/shared rule only — each page's own background image variant
+   (.page-heading-contact, -trabajo, -equipo, -valores, -charlas)
+   lives in that page's own file under assets/css/pages/, so editing
+   one page's banner never affects another's.
 =========================== */
 
 .page-heading {
@@ -9,7 +12,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding: 110px 0px;
-  margin-top: 100px;
+  margin-top: 0px;
   text-align: center;
 }
 
@@ -47,58 +50,3 @@
   }
 }
 
-.page-heading-contact {
-  background-image: url(../../Imagenes-copy/vertical.jpg);
-  padding: 60px 0px;
-}
-
-.page-heading-contact h3 {
-  font-weight: 500;
-}
-
-.page-heading-equipo {
-  background-image: url(../../Imagenes-copy/team-foto-t4c.png);
-  background-position: center top;
-  padding: 60px 0px;
-  min-height: 340px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@media (max-width: 767px) {
-  .page-heading-equipo {
-    background-position: 30% top;
-    min-height: 200px;
-  }
-}
-
-.page-heading-equipo h3 {
-  font-weight: 500;
-}
-
-.page-heading-charlas {
-  background-image: url(../../Imagenes-copy/mining-site.jpg);
-  background-position: center center;
-  padding: 60px 0px;
-}
-
-.page-heading-charlas h3 {
-  font-weight: 500;
-}
-
-.page-heading-valores {
-  padding: 60px 0px;
-}
-
-.page-heading-valores h3 {
-  font-weight: 500;
-}
-
-.page-heading-trabajo {
-  padding: 60px 0px;
-}
-
-.page-heading-trabajo h3 {
-  font-weight: 500;
-}

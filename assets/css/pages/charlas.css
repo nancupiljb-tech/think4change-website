@@ -1,0 +1,13 @@
+/* ===========================
+   CHARLAS Y SEMINARIOS — banner
+=========================== */
+
+.page-heading-charlas {
+  background-image: url(../../Imagenes-copy/mining-site.jpg);
+  background-position: center center;
+  padding: 60px 0px;
+}
+
+.page-heading-charlas h3 {
+  font-weight: 500;
+}
