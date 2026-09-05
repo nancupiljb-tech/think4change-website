@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/base/reset.css">
     <link rel="stylesheet" href="assets/css/base/layout.css">
     <link rel="stylesheet" href="assets/css/base/header.css">
+    <link rel="stylesheet" href="assets/css/base/lang-toggle.css">
     <link rel="stylesheet" href="assets/css/base/page-heading.css">
     <link rel="stylesheet" href="assets/css/base/components.css">
     <link rel="stylesheet" href="assets/css/pages/equipo.css">
@@ -52,17 +53,21 @@ https://templatemo.com/tm-591-villa-agency
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                      <li><a href="index.html" class="active">Inicio</a></li>
+                      <li><a href="index.html" class="active" data-i18n="nav.inicio">Inicio</a></li>
                       <li class="nav-dropdown">
-                        <a href="#">Nosotros</a>
+                        <a href="#" data-i18n="nav.nosotros">Nosotros</a>
                         <ul class="dropdown-menu">
-                          <li><a href="nuestro-equipo.html">Nuestro equipo</a></li>
-                          <li><a href="nuestros-valores.html">Nuestros valores</a></li>
+                          <li><a href="nuestro-equipo.html" data-i18n="nav.equipo">Nuestro equipo</a></li>
+                          <li><a href="nuestros-valores.html" data-i18n="nav.valores">Nuestros valores</a></li>
                         </ul>
                       </li>
-                      <li><a href="contacto.html">Contáctanos</a></li>
-                      <li><a href="trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
-                      <li><a href="https://blog.think4change.tech/">Blog</a></li>
+                      <li><a href="contacto.html" data-i18n="nav.contacto">Contáctanos</a></li>
+                      <li><a href="trabaja-con-nosotros.html" data-i18n="nav.trabajo">Trabaja con nosotros</a></li>
+                      <li><a href="https://blog.think4change.tech/" data-i18n="nav.blog">Blog</a></li>
+                      <li class="lang-toggle">
+                        <a href="#" data-lang="es" class="is-active">ES</a>
+                        <a href="#" data-lang="en">EN</a>
+                      </li>
                   </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -80,7 +85,7 @@ https://templatemo.com/tm-591-villa-agency
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h2 class="page-heading-hero-text">Quiénes Somos</h2>
+          <h2 class="page-heading-hero-text" data-i18n="equipo.hero">Quiénes Somos</h2>
         </div>
       </div>
     </div>
@@ -89,15 +94,15 @@ https://templatemo.com/tm-591-villa-agency
   <div class="equipo ">
     <div class="equipo-intro">
       <div class="cite-block equipo-intro-cite">
-        <cite class="cite">Recorrimos el mismo camino que hoy viven muchos de nuestros clientes.</cite>
+        <cite class="cite" data-i18n="equipo.citeText">Recorrimos el mismo camino que hoy viven muchos de nuestros clientes.</cite>
       </div>
 
       <div class="equipo-intro-body">
-        <p>Comenzamos en terreno, donde las decisiones tienen un impacto inmediato en las personas, la seguridad, la continuidad de la operación y los resultados. Con el tiempo supervisamos equipos, lideramos operaciones, dirigimos negocios y asumimos la responsabilidad por su desempeño.</p>
-        <p>Ese recorrido nos enseñó que las mejores decisiones no nacen de una metodología. Nacen de leer la realidad de cada operación y de construir las soluciones junto a quienes trabajan en ella todos los días.</p>
+        <p data-i18n="equipo.introP1">Comenzamos en terreno, donde las decisiones tienen un impacto inmediato en las personas, la seguridad, la continuidad de la operación y los resultados. Con el tiempo supervisamos equipos, lideramos operaciones, dirigimos negocios y asumimos la responsabilidad por su desempeño.</p>
+        <p data-i18n="equipo.introP2">Ese recorrido nos enseñó que las mejores decisiones no nacen de una metodología. Nacen de leer la realidad de cada operación y de construir las soluciones junto a quienes trabajan en ella todos los días.</p>
       </div>
 
-      <h3 class="equipo-intro-highlight" style="text-align: center; font-size: 24px;">Ese es el origen de la forma en que hoy trabaja <em style="font-weight: 600; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">Think4Change</em></h3>
+      <h3 class="equipo-intro-highlight" style="text-align: center; font-size: 24px;" data-i18n-html="equipo.highlight">Ese es el origen de la forma en que hoy trabaja <em style="font-weight: 600; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">Think4Change</em></h3>
     </div>
 
 <!----Dario y JC: fotos centradas, texto de Dario a la izquierda y de JC a la derecha-->
@@ -107,7 +112,7 @@ https://templatemo.com/tm-591-villa-agency
           <a href="https://www.linkedin.com/in/nancupildario/">
             <h3>Dario Nancupil</h3>
           </a>
-          <h6>CEO & Fundador</h6>
+          <h6 data-i18n="equipo.darioRole">CEO & Fundador</h6>
         </div>
         <div class="equipo-photo equipo-photo-dario">
           <a href="https://www.linkedin.com/in/nancupildario/">
@@ -117,12 +122,12 @@ https://templatemo.com/tm-591-villa-agency
       </div>
 
       <div class="equipo-text equipo-founders-text-dario">
-        
-          <p>Transformación operacional y dirección de negocios industriales.</p>
-          <p>Más de 25 años liderando operaciones y negocios industriales en Latinoaméroca, Asia Central, África y Mongolia, con responsabilidad sobre organizacions de hasta 1.000 colaboradores y operaciones superiores a US$280 millones.</p>
-          <p>Su experiencia integra estrategia, excelencia operacional y transformación de negocios en industrias donde la calidad de la ejecución define la competitividad.</p>
-          <p>MBA por la Universidad Adolfo Ibáñez, Executive Education en MIT Sloan y candidato a Doctor en Administración de Empresas por la University of Bradford.</p>
-        
+
+          <p data-i18n="equipo.darioP1">Transformación operacional y dirección de negocios industriales.</p>
+          <p data-i18n="equipo.darioP2">Más de 25 años liderando operaciones y negocios industriales en Latinoaméroca, Asia Central, África y Mongolia, con responsabilidad sobre organizacions de hasta 1.000 colaboradores y operaciones superiores a US$280 millones.</p>
+          <p data-i18n="equipo.darioP3">Su experiencia integra estrategia, excelencia operacional y transformación de negocios en industrias donde la calidad de la ejecución define la competitividad.</p>
+          <p data-i18n="equipo.darioP4">MBA por la Universidad Adolfo Ibáñez, Executive Education en MIT Sloan y candidato a Doctor en Administración de Empresas por la University of Bradford.</p>
+
       </div>
 
       <div class="equipo-photo-group equipo-photo-group-jc">
@@ -130,7 +135,7 @@ https://templatemo.com/tm-591-villa-agency
           <a href="https://www.linkedin.com/in/cortesjuancarlos/">
             <h3>Juan Carlos Cortés</h3>
           </a>
-          <h6>Co-Fundador</h6>
+          <h6 data-i18n="equipo.jcRole">Co-Fundador</h6>
         </div>
         <div class="equipo-photo equipo-photo-jc">
           <a href="https://www.linkedin.com/in/cortesjuancarlos/">
@@ -140,14 +145,14 @@ https://templatemo.com/tm-591-villa-agency
       </div>
 
       <div class="equipo-text equipo-founders-text-jc">
-        <p>Operaciones, excelencia técnica y desarrollo de capacidades.</p>
-        <p>Su trayectoria comenzó en terreno y evolucionó hacia el liderazgo de operaciones de mantenimiento y del Centro de Excelencia Técnica de Cummins Chile, donde impulsó el desarrollo de más de 260 especialistas.</p>
-        <p>Su experiencia combina conocimiento técnico, liderazgo operacional y desarrollo de personas, con la convicción de que las capacidades se construyen acompañando a los equipos en el trabajo real.</p>
+        <p data-i18n="equipo.jcP1">Operaciones, excelencia técnica y desarrollo de capacidades.</p>
+        <p data-i18n="equipo.jcP2">Su trayectoria comenzó en terreno y evolucionó hacia el liderazgo de operaciones de mantenimiento y del Centro de Excelencia Técnica de Cummins Chile, donde impulsó el desarrollo de más de 260 especialistas.</p>
+        <p data-i18n="equipo.jcP3">Su experiencia combina conocimiento técnico, liderazgo operacional y desarrollo de personas, con la convicción de que las capacidades se construyen acompañando a los equipos en el trabajo real.</p>
       </div>
     </div>
     <div class="equipo-text-final">
-      <h3>Nuestra forma de trabajar se forjó donde las decisiones se ponen a prueba todos los días.</h3>
-      <a href="contacto.html" class="cta-elegant">Contáctanos</a>
+      <h3 data-i18n="equipo.finalQuote">Nuestra forma de trabajar se forjó donde las decisiones se ponen a prueba todos los días.</h3>
+      <a href="contacto.html" class="cta-elegant" data-i18n="nav.contacto">Contáctanos</a>
     </div>
   </div>
 
@@ -167,7 +172,7 @@ https://templatemo.com/tm-591-villa-agency
       </div>
 
       <div class="footer-follow">
-        <span class="footer-follow-label">Síguenos</span>
+        <span class="footer-follow-label" data-i18n="footer.siguenos">Síguenos</span>
         <br>
         <div class="footer-social-links">
           <a href="https://www.linkedin.com/company/think4change/?viewAsMember=true" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -178,21 +183,21 @@ https://templatemo.com/tm-591-villa-agency
     <hr class="footer-divider">
 
     <div class="footer-bottom">
-      <p class="footer-copyright">Copyright © 2026 Think4Change (T4C). Todos los derechos reservados.</p>
+      <p class="footer-copyright" data-i18n="footer.copyright">Copyright © 2026 Think4Change (T4C). Todos los derechos reservados.</p>
 
       <nav class="footer-links">
-        <a href="contacto.html">Contáctanos</a>
-        <a href="nuestro-equipo.html">Nuestro equipo</a>
-        <a href="nuestros-valores.html">Nuestros valores</a>
-        <a href="trabaja-con-nosotros.html">Trabaja con nosotros</a>
-        <a href="https://blog.think4change.tech/">Blog</a>
+        <a href="contacto.html" data-i18n="nav.contacto">Contáctanos</a>
+        <a href="nuestro-equipo.html" data-i18n="nav.equipo">Nuestro equipo</a>
+        <a href="nuestros-valores.html" data-i18n="nav.valores">Nuestros valores</a>
+        <a href="trabaja-con-nosotros.html" data-i18n="nav.trabajo">Trabaja con nosotros</a>
+        <a href="https://blog.think4change.tech/" data-i18n="nav.blog">Blog</a>
       </nav>
     </div>
 
   </div>
 </footer>
 
-  <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+  <button id="back-to-top" class="back-to-top" aria-label="Volver arriba" data-i18n-aria-label="common.backToTop">
     <i class="fa fa-chevron-up"></i>
   </button>
 
@@ -204,6 +209,7 @@ https://templatemo.com/tm-591-villa-agency
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/js/i18n.js"></script>
 
   </body>
 </html>

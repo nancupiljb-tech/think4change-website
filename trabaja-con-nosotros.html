@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/base/reset.css">
     <link rel="stylesheet" href="assets/css/base/layout.css">
     <link rel="stylesheet" href="assets/css/base/header.css">
+    <link rel="stylesheet" href="assets/css/base/lang-toggle.css">
     <link rel="stylesheet" href="assets/css/base/page-heading.css">
     <link rel="stylesheet" href="assets/css/base/contact-form.css">
     <link rel="stylesheet" href="assets/css/pages/trabaja-con-nosotros.css">
@@ -54,17 +55,21 @@ https://templatemo.com/tm-591-villa-agency
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                      <li><a href="index.html">Inicio</a></li>
+                      <li><a href="index.html" data-i18n="nav.inicio">Inicio</a></li>
                       <li class="nav-dropdown">
-                        <a href="#">Nosotros</a>
+                        <a href="#" data-i18n="nav.nosotros">Nosotros</a>
                         <ul class="dropdown-menu">
-                          <li><a href="nuestro-equipo.html">Nuestro equipo</a></li>
-                          <li><a href="nuestros-valores.html">Nuestros valores</a></li>
+                          <li><a href="nuestro-equipo.html" data-i18n="nav.equipo">Nuestro equipo</a></li>
+                          <li><a href="nuestros-valores.html" data-i18n="nav.valores">Nuestros valores</a></li>
                         </ul>
                       </li>
-                      <li><a href="contacto.html">Contáctanos</a></li>
-                      <li><a href="trabaja-con-nosotros.html" class="active">Trabaja con nosotros</a></li>
-                      <li><a href="https://blog.think4change.tech/">Blog</a></li>
+                      <li><a href="contacto.html" data-i18n="nav.contacto">Contáctanos</a></li>
+                      <li><a href="trabaja-con-nosotros.html" class="active" data-i18n="nav.trabajo">Trabaja con nosotros</a></li>
+                      <li><a href="https://blog.think4change.tech/" data-i18n="nav.blog">Blog</a></li>
+                      <li class="lang-toggle">
+                        <a href="#" data-lang="es" class="is-active">ES</a>
+                        <a href="#" data-lang="en">EN</a>
+                      </li>
                   </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -82,7 +87,7 @@ https://templatemo.com/tm-591-villa-agency
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h2 class="page-heading-hero-text">¿Buscas oportunidades laborales en la industria minera?</h2>
+          <h2 class="page-heading-hero-text" data-i18n="trabajo.hero">¿Buscas oportunidades laborales en la industria minera?</h2>
         </div>
       </div>
     </div>
@@ -92,8 +97,8 @@ https://templatemo.com/tm-591-villa-agency
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
-          <p>En Think4Change conectamos talento con oportunidades en la industria minera. Envíanos tu <strong><em>CV</em></strong> y una <strong><em> breve carta de motivación</em></strong>, con tu experiencia, intereses y el tipo de posición que buscas.</p>
-          <p>Tu información será tratada de forma confidencial y utilizada únicamente para evaluar tu perfil en procesos de selección presentes o futuros. Tus datos no serás compartidos con terceros sin tu autorización.</p>
+          <p data-i18n-html="trabajo.p1">En Think4Change conectamos talento con oportunidades en la industria minera. Envíanos tu <strong><em>CV</em></strong> y una <strong><em> breve carta de motivación</em></strong>, con tu experiencia, intereses y el tipo de posición que buscas.</p>
+          <p data-i18n="trabajo.p2">Tu información será tratada de forma confidencial y utilizada únicamente para evaluar tu perfil en procesos de selección presentes o futuros. Tus datos no serás compartidos con terceros sin tu autorización.</p>
 
           <br>
           <div class="row">
@@ -101,7 +106,7 @@ https://templatemo.com/tm-591-villa-agency
             </div>
             <div class="col-lg-12">
               <div class="item email">
-                <h6 style="margin: 0;" style="text-align: right;">info@think4change.tech<br><span>Contacto Empresa</span></h6>
+                <h6 style="margin: 0;" style="text-align: right;">info@think4change.tech<br><span data-i18n="common.contactoEmpresa">Contacto Empresa</span></h6>
               </div>
             </div>
           </div>
@@ -112,14 +117,14 @@ https://templatemo.com/tm-591-villa-agency
             <div class="row">
               <div class="col-lg-12">
                 <fieldset>
-                  <label for="name">Nombre Completo</label>
-                  <input type="text" name="name" id="name" placeholder="Tu nombre" autocomplete="on" required>
+                  <label for="name" data-i18n="form.nombreLabel">Nombre Completo</label>
+                  <input type="text" name="name" id="name" placeholder="Tu nombre" data-i18n-placeholder="form.nombrePlaceholder" autocomplete="on" required>
                 </fieldset>
               </div>
               <div class="col-lg-12">
                 <fieldset>
-                  <label for="email">Correo Electrónico</label>
-                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Tu Correo" required="">
+                  <label for="email" data-i18n="form.emailLabel">Correo Electrónico</label>
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Tu Correo" data-i18n-placeholder="form.emailPlaceholder" required="">
                 </fieldset>
               </div>
 
@@ -130,9 +135,9 @@ https://templatemo.com/tm-591-villa-agency
                   <!-- Campo: Currículum Vitae -->
                   <div class="col-lg-6" style="margin-bottom: 20px;">
                     <fieldset>
-                      <label style="display: block; margin-bottom: 8px; font-weight: 500;">Currículum Vitae</label>
+                      <label style="display: block; margin-bottom: 8px; font-weight: 500;" data-i18n="trabajo.cvLabel">Currículum Vitae</label>
                       <label for="cv-file" class="custom-file-upload">
-                        <i class="fa fa-file-pdf"></i> <span id="cv-text">Seleccionar CV (PDF)</span>
+                        <i class="fa fa-file-pdf"></i> <span id="cv-text" data-i18n="trabajo.cvSelect">Seleccionar CV (PDF)</span>
                       </label>
                       <input type="file" name="cv-file" id="cv-file" accept=".pdf" required style="display: none;">
                     </fieldset>
@@ -141,9 +146,9 @@ https://templatemo.com/tm-591-villa-agency
                   <!-- Campo: Carta de Motivación -->
                   <div class="col-lg-6" style="margin-bottom: 20px;">
                     <fieldset>
-                      <label style="display: block; margin-bottom: 8px; font-weight: 500;">Carta de Motivación</label>
+                      <label style="display: block; margin-bottom: 8px; font-weight: 500;" data-i18n="trabajo.cartaLabel">Carta de Motivación</label>
                       <label for="carta-file" class="custom-file-upload">
-                        <i class="fa fa-envelope-open"></i> <span id="carta-text">Seleccionar archivo</span>
+                        <i class="fa fa-envelope-open"></i> <span id="carta-text" data-i18n="trabajo.cartaSelect">Seleccionar archivo</span>
                       </label>
                       <input type="file" name="carta-file" id="carta-file" accept=".pdf,.doc,.docx" style="display: none;">
                     </fieldset>
@@ -153,13 +158,13 @@ https://templatemo.com/tm-591-villa-agency
 
               <div class="col-lg-12">
                 <fieldset>
-                  <label for="message">Mensaje</label>
-                  <textarea name="message" id="message" placeholder="Cuéntanos sobre tu experiencia e intereses"></textarea>
+                  <label for="message" data-i18n="form.mensajeLabel">Mensaje</label>
+                  <textarea name="message" id="message" placeholder="Cuéntanos sobre tu experiencia e intereses" data-i18n-placeholder="trabajo.mensajePlaceholder"></textarea>
                 </fieldset>
               </div>
               <div class="col-lg-12">
                 <fieldset>
-                  <button type="submit" id="form-submit" class="orange-button">Enviar</button>
+                  <button type="submit" id="form-submit" class="orange-button" data-i18n="common.enviar">Enviar</button>
                 </fieldset>
               </div>
             </div>
@@ -182,7 +187,7 @@ https://templatemo.com/tm-591-villa-agency
         </div>
 
         <div class="footer-follow">
-          <span class="footer-follow-label">Síguenos</span>
+          <span class="footer-follow-label" data-i18n="footer.siguenos">Síguenos</span>
           <br>
           <div class="footer-social-links">
             <a href="https://www.linkedin.com/company/think4change/?viewAsMember=true" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -193,21 +198,21 @@ https://templatemo.com/tm-591-villa-agency
       <hr class="footer-divider">
 
       <div class="footer-bottom">
-        <p class="footer-copyright">Copyright © 2026 Think4Change (T4C). Todos los derechos reservados.</p>
+        <p class="footer-copyright" data-i18n="footer.copyright">Copyright © 2026 Think4Change (T4C). Todos los derechos reservados.</p>
 
         <nav class="footer-links">
-          <a href="contacto.html">Contáctanos</a>
-          <a href="nuestro-equipo.html">Nuestro equipo</a>
-          <a href="nuestros-valores.html">Nuestros valores</a>
-          <a href="trabaja-con-nosotros.html">Trabaja con nosotros</a>
-          <a href="https://blog.think4change.tech/">Blog</a>
+          <a href="contacto.html" data-i18n="nav.contacto">Contáctanos</a>
+          <a href="nuestro-equipo.html" data-i18n="nav.equipo">Nuestro equipo</a>
+          <a href="nuestros-valores.html" data-i18n="nav.valores">Nuestros valores</a>
+          <a href="trabaja-con-nosotros.html" data-i18n="nav.trabajo">Trabaja con nosotros</a>
+          <a href="https://blog.think4change.tech/" data-i18n="nav.blog">Blog</a>
         </nav>
       </div>
 
     </div>
   </footer>
 
-  <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+  <button id="back-to-top" class="back-to-top" aria-label="Volver arriba" data-i18n-aria-label="common.backToTop">
     <i class="fa fa-chevron-up"></i>
   </button>
 
@@ -219,6 +224,7 @@ https://templatemo.com/tm-591-villa-agency
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/js/i18n.js"></script>
 
   <script>
 // FUNCIÓN PARA ACTUALIZAR EL TEXTO E ICONO CUANDO SUBEN UN ARCHIVO

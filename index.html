@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/base/reset.css">
     <link rel="stylesheet" href="assets/css/base/layout.css">
     <link rel="stylesheet" href="assets/css/base/header.css">
+    <link rel="stylesheet" href="assets/css/base/lang-toggle.css">
     <link rel="stylesheet" href="assets/css/base/components.css">
 
     <!-- Homepage sections, in page order -->
@@ -66,17 +67,21 @@ https://templatemo.com/tm-591-villa-agency
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                      <li><a href="index.html" class="active">Inicio</a></li>
+                      <li><a href="index.html" class="active" data-i18n="nav.inicio">Inicio</a></li>
                       <li class="nav-dropdown">
-                        <a href="#">Nosotros</a>
+                        <a href="#" data-i18n="nav.nosotros">Nosotros</a>
                         <ul class="dropdown-menu">
-                          <li><a href="nuestro-equipo.html">Nuestro Equipo</a></li>
-                          <li><a href="nuestros-valores.html">Nuestros Valores</a></li>
+                          <li><a href="nuestro-equipo.html" data-i18n="nav.equipo">Nuestro Equipo</a></li>
+                          <li><a href="nuestros-valores.html" data-i18n="nav.valores">Nuestros Valores</a></li>
                         </ul>
                       </li>
-                      <li><a href="contacto.html">Contáctanos</a></li>
-                      <li><a href="trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
-                      <li><a href="https://blog.think4change.tech/">Blog</a></li>
+                      <li><a href="contacto.html" data-i18n="nav.contacto">Contáctanos</a></li>
+                      <li><a href="trabaja-con-nosotros.html" data-i18n="nav.trabajo">Trabaja con nosotros</a></li>
+                      <li><a href="https://blog.think4change.tech/" data-i18n="nav.blog">Blog</a></li>
+                      <li class="lang-toggle">
+                        <a href="#" data-lang="es" class="is-active">ES</a>
+                        <a href="#" data-lang="en">EN</a>
+                      </li>
                   </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -93,8 +98,8 @@ https://templatemo.com/tm-591-villa-agency
   <!-- CEO Quote Masthead Start -->
   <div class="ceo-masthead">
     <div class="container">
-      <p class="ceo-masthead-quote">&ldquo;El desempeño no se improvisa, se construye&rdquo;</p>
-      <p class="ceo-masthead-author">Darío Ñancupil <span>— Fundador</span></p>
+      <p class="ceo-masthead-quote" data-i18n="index.ceoQuote">&ldquo;El desempeño no se improvisa, se construye&rdquo;</p>
+      <p class="ceo-masthead-author">Darío Ñancupil <span data-i18n="index.ceoRole">— Fundador</span></p>
     </div>
   </div>
   <!--  CEO Quote Masthead End  -->
@@ -108,22 +113,22 @@ https://templatemo.com/tm-591-villa-agency
       <div class="item item-1">
         <div class="header-text">
           <span class="category"></span>
-          <h4>Ayudamos a <span style="color: #2b6cc4;">desarrollar organizaciones</span> en las que se puede confiar.</h4>
+          <h4 data-i18n-html="index.banner1">Ayudamos a <span style="color: #2b6cc4;">desarrollar organizaciones</span> en las que se puede confiar.</h4>
         </div>
       </div>
-  
+
       <div class="item item-2">
         <div class="header-text">
           <span class="category"></span>
-          <h4>Responder mejor es una <span style="color: #2b6cc4;">capacidad</span> que se <span style="color: #2b6cc4;">desarrolla.</span></h4>
+          <h4 data-i18n-html="index.banner2">Responder mejor es una <span style="color: #2b6cc4;">capacidad</span> que se <span style="color: #2b6cc4;">desarrolla.</span></h4>
         </div>
-        
+
       </div>
-  
+
       <div class="item item-3">
         <div class="header-text">
           <span class="category"></span>
-          <h4>La operación <span style="color: #2b6cc4;">cambió.</span> Las organizaciones también deben hacerlo.</h4>
+          <h4 data-i18n-html="index.banner3">La operación <span style="color: #2b6cc4;">cambió.</span> Las organizaciones también deben hacerlo.</h4>
         </div>
       </div>
   
@@ -147,10 +152,10 @@ https://templatemo.com/tm-591-villa-agency
       </div>
       <div class="intro-block-text">
         <a href="contacto.html" class="block-link">
-          <h4>En Think4Change</h4>
-          <p>Comprendemos la operación.</p>
-          <p>Identificamos las brechas que limita su desempeño.</p>
-          <p>Desarrollamos soluciones para fortalecer la capacidad de las organizaciones de cumplir los compromisos que asumen con sus clientes.</p>
+          <h4 data-i18n="index.intro1Title">En Think4Change</h4>
+          <p data-i18n="index.intro1P1">Comprendemos la operación.</p>
+          <p data-i18n="index.intro1P2">Identificamos las brechas que limita su desempeño.</p>
+          <p data-i18n="index.intro1P3">Desarrollamos soluciones para fortalecer la capacidad de las organizaciones de cumplir los compromisos que asumen con sus clientes.</p>
         </a>
       </div>
     </div>
@@ -163,10 +168,10 @@ https://templatemo.com/tm-591-villa-agency
   <section class="bloque-2-section">
     <div class="bloque-2">
       <div class="bloque-2-text">
-        <h2><strong>Las organizaciones industriales enfrentan un escenario muy distinto al de hace una década</strong></h2>
-        <p>Tecnología, talento, seguridad y productividad están cambiando la forma de operar.</p>
+        <h2><strong data-i18n="index.bloque2Title">Las organizaciones industriales enfrentan un escenario muy distinto al de hace una década</strong></h2>
+        <p data-i18n="index.bloque2P1">Tecnología, talento, seguridad y productividad están cambiando la forma de operar.</p>
         <br>
-        <p>Hoy la capacidad de responder dejó de ser una ventaja competitiva; es una condición para sostener el negocio.</p>
+        <p data-i18n="index.bloque2P2">Hoy la capacidad de responder dejó de ser una ventaja competitiva; es una condición para sostener el negocio.</p>
       </div>
     </div>
   </section>
@@ -179,10 +184,10 @@ https://templatemo.com/tm-591-villa-agency
     <div class="intro-block">
       <div class="intro-block-text">
         <a href="contacto.html" class="block-link">
-          <h4>Si lideras una operación, conoces bien esta realidad</h4>
-          <p>No todos los días transcurren como estaban planificados.</p>
-          <p>Las condiciones cambian y aparecen imprevistos.</p>
-          <p>Hay decisiones que no pueden esperar.</p>
+          <h4 data-i18n="index.intro2Title">Si lideras una operación, conoces bien esta realidad</h4>
+          <p data-i18n="index.intro2P1">No todos los días transcurren como estaban planificados.</p>
+          <p data-i18n="index.intro2P2">Las condiciones cambian y aparecen imprevistos.</p>
+          <p data-i18n="index.intro2P3">Hay decisiones que no pueden esperar.</p>
         </a>
       </div>
       <div class="intro-block-img">
@@ -202,8 +207,8 @@ https://templatemo.com/tm-591-villa-agency
   <section class="stat-rows-wrapper">
     <div class="container">
       <div class="section-heading text-center">
-        <h6>| El desafío</h6>
-        <h2>Algunas cifras que lo explican</h2>
+        <h6 data-i18n="index.statsLabel">| El desafío</h6>
+        <h2 data-i18n="index.statsTitle">Algunas cifras que lo explican</h2>
       </div>
     </div>
 
@@ -214,7 +219,7 @@ https://templatemo.com/tm-591-villa-agency
           <span class="value">+36.895</span>
         </div>
         <div class="stat-row-text">
-          <p>nuevos trabajadores requerirá la gran minería al 2034. Cerca de 10.000 corresponderán a mantenedores y mantenedoras. Y más de 6.000 corresponderán a Operador/a de Equipos Móviles, que será el segundo perfil con mayor demanda.</p>
+          <p data-i18n="index.stat1">nuevos trabajadores requerirá la gran minería al 2034. Cerca de 10.000 corresponderán a mantenedores y mantenedoras. Y más de 6.000 corresponderán a Operador/a de Equipos Móviles, que será el segundo perfil con mayor demanda.</p>
         </div>
       </div>
 
@@ -226,7 +231,7 @@ https://templatemo.com/tm-591-villa-agency
          
         </div>
         <div class="stat-row-text">
-          <p>accidentes laborales y de trayecto se registraron en Chile durante 2024. Consolidar una cultura de seguridad sigue siendo uno de los principales desafíos de la industria.</p>
+          <p data-i18n="index.stat2">accidentes laborales y de trayecto se registraron en Chile durante 2024. Consolidar una cultura de seguridad sigue siendo uno de los principales desafíos de la industria.</p>
         </div>
       </div>
 
@@ -236,16 +241,16 @@ https://templatemo.com/tm-591-villa-agency
           
         </div>
         <div class="stat-row-text">
-          <p>44% de quienes ingresan como operadores/as y 36% de las y los mantenedores llegan a la gran minería con brechas en competencias digitales, una capacidad cada vez más crítica para responder a los desafíos de la operación.</p>
+          <p data-i18n="index.stat3">44% de quienes ingresan como operadores/as y 36% de las y los mantenedores llegan a la gran minería con brechas en competencias digitales, una capacidad cada vez más crítica para responder a los desafíos de la operación.</p>
         </div>
       </div>
 
       <div class="stat-row reverse">
         <div class="stat-square">
-          <span class="value">Productividad</span>
+          <span class="value" data-i18n="index.stat4Value">Productividad</span>
         </div>
         <div class="stat-row-text">
-          <p>continúa siendo uno de los principales desafíos para la competitividad del país. La tecnología acelera el cambio, pero la forma de responder sigue marcando la diferencia.</p>
+          <p data-i18n="index.stat4">continúa siendo uno de los principales desafíos para la competitividad del país. La tecnología acelera el cambio, pero la forma de responder sigue marcando la diferencia.</p>
         </div>
       </div>
 
@@ -263,15 +268,15 @@ https://templatemo.com/tm-591-villa-agency
   <section class="values-split">
     <div class="values-split-inner">
       <div class="values-split-text">
-        <h2>No todas las operaciones necesitan lo mismo y saber dónde intervenir marca la diferencia</h2>
-        <p>En algunos casos, el desafío está en preparar mejor a las personas, fortalecer el liderazgo o mejorar los procesos. En otros, en elevar la calidad del servicio, incorporar nuevas tecnologías o abordar decisiones de equipamiento e inversión. Por eso nuestro trabajo comienza donde una decisión bien orientada puede generar el mayor impacto.</p>
+        <h2 data-i18n="index.valuesSplitTitle">No todas las operaciones necesitan lo mismo y saber dónde intervenir marca la diferencia</h2>
+        <p data-i18n="index.valuesSplitP">En algunos casos, el desafío está en preparar mejor a las personas, fortalecer el liderazgo o mejorar los procesos. En otros, en elevar la calidad del servicio, incorporar nuevas tecnologías o abordar decisiones de equipamiento e inversión. Por eso nuestro trabajo comienza donde una decisión bien orientada puede generar el mayor impacto.</p>
 
 
         <div class="values-split-item">
           <span class="values-split-number">01</span>
           <div>
-            <h4>Talento</h4>
-            <p>Identificamos el talento que necesita tu organización para ejecutar su estrategia.</p>
+            <h4 data-i18n="index.valTalentoTitle">Talento</h4>
+            <p data-i18n="index.valTalentoP">Identificamos el talento que necesita tu organización para ejecutar su estrategia.</p>
           </div>
         </div>
 
@@ -279,8 +284,8 @@ https://templatemo.com/tm-591-villa-agency
         <div class="values-split-item">
           <span class="values-split-number">02</span>
           <div>
-            <h4>Capacidades</h4>
-            <p>Desarrollar acelerado de competencias técnicas y de liderazgo para potenciar el desempeño.</p>
+            <h4 data-i18n="index.valCapacidadesTitle">Capacidades</h4>
+            <p data-i18n="index.valCapacidadesP">Desarrollar acelerado de competencias técnicas y de liderazgo para potenciar el desempeño.</p>
           </div>
         </div>
 
@@ -288,8 +293,8 @@ https://templatemo.com/tm-591-villa-agency
         <div class="values-split-item">
           <span class="values-split-number">03</span>
           <div>
-            <h4>Ejecución</h4>
-            <p>Fortalecer procesos, gestión y disciplina operacional.</p>
+            <h4 data-i18n="index.valEjecucionTitle">Ejecución</h4>
+            <p data-i18n="index.valEjecucionP">Fortalecer procesos, gestión y disciplina operacional.</p>
           </div>
         </div>
 
@@ -297,8 +302,8 @@ https://templatemo.com/tm-591-villa-agency
         <div class="values-split-item">
           <span class="values-split-number">04</span>
           <div>
-            <h4>Valor</h4>
-            <p>Medir el impacto de la experiencia del cliente y sus resultados concretos.</p>
+            <h4 data-i18n="index.valValorTitle">Valor</h4>
+            <p data-i18n="index.valValorP">Medir el impacto de la experiencia del cliente y sus resultados concretos.</p>
           </div>
         </div>
       </div>
@@ -313,7 +318,7 @@ https://templatemo.com/tm-591-villa-agency
 <!-- Cita T4C Start -->
   <section class="expand-cards-wrapper">
     <div class="cite-block">
-      <a href="contacto.html"><cite class="cite">Antes de definir un camino, buscamos entender qué está ocurriendo realmente. Observamos cómo interactúan las personas, los procesos, la tecnología y la forma de trabajar para reconocer aquello que está afectando el desempeño y distinguir sus causas.</cite>
+      <a href="contacto.html"><cite class="cite" data-i18n="index.citeText">Antes de definir un camino, buscamos entender qué está ocurriendo realmente. Observamos cómo interactúan las personas, los procesos, la tecnología y la forma de trabajar para reconocer aquello que está afectando el desempeño y distinguir sus causas.</cite>
       <p class="cite-author">Think4Change</p></a>
     </div>
   </section>
@@ -327,9 +332,9 @@ https://templatemo.com/tm-591-villa-agency
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading text-center">
-            <h2>Toda gran transformación comienza con una conversación</h2>
+            <h2 data-i18n="index.contactTitle">Toda gran transformación comienza con una conversación</h2>
         <br>
-            <h6>Contáctanos</h6>
+            <h6 data-i18n="nav.contacto">Contáctanos</h6>
              </div>
         </div>
       </div>
@@ -346,7 +351,7 @@ https://templatemo.com/tm-591-villa-agency
                   <i class="fa fa-envelope" style="font-size: 45px; color: #2b6cc4;">
                   </i>
                 </a>
-                <a href="contacto.html" style="text-align: left;"><h6 style="margin: 0;">info@think4change.tech<br><span style="font-weight: 400; color: #8fa2bd;">Contacto empresa</span></h6></a>
+                <a href="contacto.html" style="text-align: left;"><h6 style="margin: 0;">info@think4change.tech<br><span style="font-weight: 400; color: #8fa2bd;" data-i18n="common.contactoEmpresa">Contacto empresa</span></h6></a>
               </div>
             </div>
           </div>
@@ -365,7 +370,7 @@ https://templatemo.com/tm-591-villa-agency
       </div>
 
       <div class="footer-follow">
-        <span class="footer-follow-label">Síguenos</span>
+        <span class="footer-follow-label" data-i18n="footer.siguenos">Síguenos</span>
         <br>
         <div class="footer-social-links">
           <a href="https://www.linkedin.com/company/think4change/?viewAsMember=true" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -376,14 +381,14 @@ https://templatemo.com/tm-591-villa-agency
     <hr class="footer-divider">
 
     <div class="footer-bottom">
-      <p class="footer-copyright">Copyright © 2026 Think4Change (T4C). Todos los derechos reservados.</p>
+      <p class="footer-copyright" data-i18n="footer.copyright">Copyright © 2026 Think4Change (T4C). Todos los derechos reservados.</p>
 
       <nav class="footer-links">
-        <a href="contacto.html">Contáctanos</a>
-        <a href="nuestro-equipo.html">Nuestro equipo</a>
-        <a href="nuestros-valores.html">Nuestros valores</a>
-        <a href="trabaja-con-nosotros.html">Trabaja con nosotros</a>
-        <a href="https://blog.think4change.tech/">Blog</a>
+        <a href="contacto.html" data-i18n="nav.contacto">Contáctanos</a>
+        <a href="nuestro-equipo.html" data-i18n="nav.equipo">Nuestro equipo</a>
+        <a href="nuestros-valores.html" data-i18n="nav.valores">Nuestros valores</a>
+        <a href="trabaja-con-nosotros.html" data-i18n="nav.trabajo">Trabaja con nosotros</a>
+        <a href="https://blog.think4change.tech/" data-i18n="nav.blog">Blog</a>
       </nav>
     </div>
 
@@ -391,7 +396,7 @@ https://templatemo.com/tm-591-villa-agency
 </footer>
 <!-- Footer End -->
 
-<button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+<button id="back-to-top" class="back-to-top" aria-label="Volver arriba" data-i18n-aria-label="common.backToTop">
   <i class="fa fa-chevron-up"></i>
 </button>
 
@@ -403,6 +408,7 @@ https://templatemo.com/tm-591-villa-agency
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/js/i18n.js"></script>
 
   </body>
 </html>

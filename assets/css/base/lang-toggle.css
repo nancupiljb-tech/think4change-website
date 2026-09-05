@@ -1,0 +1,52 @@
+/* ===========================
+   LANGUAGE TOGGLE (ES / EN) — shared by every page
+   Lives as an <li class="lang-toggle"> inside the same <ul class="nav">
+   as the other menu items, so it reuses the existing desktop/mobile menu
+   positioning — these rules only override its own look, at higher
+   specificity than the generic nav-link rules in header.css.
+=========================== */
+
+.header-area .main-nav .nav li.lang-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.header-area .main-nav .nav li.lang-toggle a {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  min-height: 0 !important;
+  height: 28px !important;
+  line-height: 28px !important;
+  padding: 0 12px !important;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  border-radius: 14px;
+  color: #0b1a30;
+  border: 1px solid rgba(11, 26, 48, 0.25);
+  transition: all .3s ease;
+}
+
+.header-area .main-nav .nav li.lang-toggle a.is-active {
+  background-color: #0071f8;
+  border-color: #0071f8;
+  color: #ffffff;
+}
+
+.header-area .main-nav .nav li.lang-toggle a:hover:not(.is-active) {
+  border-color: #0071f8;
+  color: #0071f8;
+}
+
+@media (max-width: 767px) {
+  .header-area .main-nav .nav li.lang-toggle {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+}

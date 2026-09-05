@@ -6,9 +6,12 @@
 =========================== */
 
 .page-heading-trabajo {
-  background-image: url(../../Imagenes-copy/banner-3.png);
+  /* Base .page-heading defaults to "center bottom" — move the image up to
+     show more of the top */
+  background-image: url(../../Imagenes-copy/piedras.jpg);
+  background-position: center top;
   padding: 100px 0px;
-  min-height: 320px;
+  min-height: 370px;
   display: flex;
   align-items: center;
   text-align: left;

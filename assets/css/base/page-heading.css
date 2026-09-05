@@ -18,7 +18,9 @@
 
 @media (max-width: 767px) {
   .page-heading {
-    margin-top: 80px;
+    /* Header is in normal flow (not fixed) on mobile, so it already
+       reserves its own 80px — this extra margin was doubling the gap */
+    margin-top: 0px;
   }
 }
 
