@@ -10,6 +10,23 @@
     });
 
 
+	// Back-to-top button: show once scrolled down, scroll smoothly to top on click
+	var backToTop = document.getElementById('back-to-top');
+	if (backToTop) {
+		window.addEventListener('scroll', function() {
+			if (window.scrollY > 400) {
+				backToTop.classList.add('is-visible');
+			} else {
+				backToTop.classList.remove('is-visible');
+			}
+		});
+
+		backToTop.addEventListener('click', function() {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		});
+	}
+
+
 	// Force autoplay on the intro block video (some browsers won't honor the attribute alone)
 	$('.intro-block-img video').each(function() {
 		var video = this;

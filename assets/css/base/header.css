@@ -129,6 +129,7 @@
   left: 0;
   min-width: 220px;
   background-color: #142b4d;
+  border: none;
   border-radius: 8px;
   box-shadow: 0px 10px 25px rgba(0,0,0,0.35);
   padding: 18px 0 8px 0;
@@ -162,13 +163,15 @@
   .header-area .main-nav .nav .dropdown-menu {
     display: block;
     position: static;
+    border: none;
+    border-radius: 0;
     box-shadow: none;
     margin-top: 0;
     padding: 0;
     background-color: transparent;
   }
   .header-area .main-nav .nav .dropdown-menu li a {
-    padding-left: 40px;
+    padding-left: 0;
   }
 }
 
@@ -176,8 +179,8 @@
   cursor: pointer;
   position: absolute;
   top: 23px;
-  width: 32px;
-  height: 40px;
+  width: 24px;
+  height: 30px;
   text-indent: -9999em;
   z-index: 99;
   right: 20px;
@@ -191,10 +194,10 @@
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #f3f6fb;
+  background-color: #0b1a30;
   display: block;
   position: absolute;
-  width: 30px;
+  width: 22px;
   height: 2px;
   left: 0;
 }
@@ -205,10 +208,10 @@
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #f3f6fb;
+  background-color: #0b1a30;
   display: block;
   position: absolute;
-  width: 30px;
+  width: 22px;
   height: 2px;
   left: 0;
   width: 75%;
@@ -220,7 +223,7 @@
 }
 
 .header-area .main-nav .menu-trigger span {
-  top: 16px;
+  top: 12px;
 }
 
 .header-area .main-nav .menu-trigger span:before {
@@ -228,7 +231,7 @@
   -ms-transform-origin: 33% 100%;
   -webkit-transform-origin: 33% 100%;
   transform-origin: 33% 100%;
-  top: -10px;
+  top: -7px;
   z-index: 10;
 }
 
@@ -237,7 +240,7 @@
   -ms-transform-origin: 33% 0;
   -webkit-transform-origin: 33% 0;
   transform-origin: 33% 0;
-  top: 10px;
+  top: 7px;
 }
 
 .header-area .main-nav .menu-trigger.active span,
@@ -248,19 +251,19 @@
 }
 
 .header-area .main-nav .menu-trigger.active span:before {
-  -moz-transform: translateY(6px) translateX(1px) rotate(45deg);
-  -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
-  -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
-  transform: translateY(6px) translateX(1px) rotate(45deg);
-  background-color: #f3f6fb;
+  -moz-transform: translateY(4px) translateX(1px) rotate(45deg);
+  -ms-transform: translateY(4px) translateX(1px) rotate(45deg);
+  -webkit-transform: translateY(4px) translateX(1px) rotate(45deg);
+  transform: translateY(4px) translateX(1px) rotate(45deg);
+  background-color: #0b1a30;
 }
 
 .header-area .main-nav .menu-trigger.active span:after {
-  -moz-transform: translateY(-6px) translateX(1px) rotate(-45deg);
-  -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
-  -webkit-transform: translateY(-6px) translateX(1px) rotate(-45deg);
-  transform: translateY(-6px) translateX(1px) rotate(-45deg);
-  background-color: #f3f6fb;
+  -moz-transform: translateY(-4px) translateX(1px) rotate(-45deg);
+  -ms-transform: translateY(-4px) translateX(1px) rotate(-45deg);
+  -webkit-transform: translateY(-4px) translateX(1px) rotate(-45deg);
+  transform: translateY(-4px) translateX(1px) rotate(-45deg);
+  background-color: #0b1a30;
 }
 
 .visible {
@@ -304,14 +307,19 @@
 
   .header-area .main-nav {
     min-height: 80px;
+    /* ul.nav (off-canvas) and .menu-trigger are both taken out of normal
+       flow on mobile, so the logo is effectively the only flex item left —
+       centering it here is more robust than absolute-positioning math,
+       which drifted off-center depending on the container's own padding */
+    justify-content: center;
   }
 
   .header-area .main-nav .logo {
-    position: absolute;
-    left: 50%;
-    top: calc(50% + 5px);
-    transform: translate(-50%, -50%);
-    max-width: calc(100% - 100px);
+    max-width: calc(100% - 140px);
+    margin-left: 0;
+    /* Nudge a little down and to the left of dead-center, purely visual
+       so it doesn't disturb the flex-centering math above */
+    transform: translate(-15px, 6px);
   }
 
   .header-area .main-nav .logo h3 {
@@ -341,7 +349,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    background-color: #0b1a30;
+    background-color: #ffffff;
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
     margin: 0;
     padding: 10px 0;
@@ -359,7 +367,7 @@
     width: 100%;
     background: transparent;
     border-top: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(11, 26, 48, 0.1);
     padding-left: 24px !important;
     padding-right: 24px !important;
     height: auto;
@@ -369,12 +377,53 @@
     border-bottom: none;
   }
 
+  /* min-height (not a fixed line-height) so a long label like "Trabaja
+     con nosotros" can wrap to two lines without overlapping the next item */
   .header-area .main-nav .nav li a {
-    line-height: 54px;
-    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    height: auto;
+    line-height: 1.4;
+    padding-top: 12px;
+    padding-bottom: 12px;
     font-weight: 400;
-    color: #142b4d;
+    color: #1E6CC0;
     border-radius: 0;
+  }
+
+  .header-area .main-nav .nav li:hover a,
+  .header-area .main-nav .nav li a.active {
+    color: #0b1a30;
+  }
+
+  /* Flatten "Nosotros" into the list on mobile: hide the parent toggle,
+     its two sub-items just read as regular top-level links */
+  .header-area .main-nav .nav li.nav-dropdown > a {
+    display: none;
+  }
+
+  /* Match the regular items exactly — these used to keep their own compact
+     desktop-dropdown sizing (smaller line-height/padding, no-wrap), which
+     made them look different from the rest of the mobile menu */
+  .header-area .main-nav .nav .dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    height: auto;
+    line-height: 1.4;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    white-space: normal;
+    font-weight: 400;
+    color: #1E6CC0;
+  }
+
+  .header-area .main-nav .nav .dropdown-menu li a:hover {
+    color: #0b1a30;
+    background-color: transparent;
   }
 
   /* Backdrop behind the sidebar */
@@ -386,7 +435,9 @@
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 150;
+    /* Below .header-area's own z-index (100) — otherwise this dims the
+       white sidebar itself instead of just the page behind it */
+    z-index: 90;
   }
 
   .mobile-nav-overlay.is-open {
